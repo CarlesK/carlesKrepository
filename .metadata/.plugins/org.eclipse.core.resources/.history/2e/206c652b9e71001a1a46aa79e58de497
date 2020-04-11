@@ -1,0 +1,20 @@
+/*
+ * AnnuaireTesteur.cpp
+ *
+ *  Created on: 2020-03-29
+ *      Author: etudiant
+ */
+
+
+#include<gtest/gtest.h>
+using namespace hockey;
+using namespace util;
+
+TEST(AnnuaireConstructeur,ConstructeurParametres)
+{   Date entaineurDate(01, 01, 1970);
+
+    unEntraineur("Bonneau","Jean",entaineurDate,"514 369-9874","BONJ 7001 0112",'M');
+	ASSERT_TRUE(unEntraineur.reqDateNaissance().estBissextile(1980));
+	 Date uneDate(12, 12, 2000);
+	    ASSERT_THROW(Joueur unJoueur("BLO","JOE",uneDate,"514 369-9874","Centre"),PreconditionException) << "Age du Jour pas plus de 17 ans";
+}

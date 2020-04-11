@@ -1,0 +1,190 @@
+#include "Personne.h"
+#include "Entraineur.h"
+#include "Joueur.h"
+#include "Annuaire.h"
+#include "ContratException.h"
+#include "Date.h"
+#include "validationFormat.h"
+
+#include <map>
+
+
+#include <iostream>
+#include <string>
+#include <ctime>
+
+using namespace hockey;
+
+using namespace std;
+int main()
+{
+   try
+   {
+/*
+   cout <<"Bienvenue dans l'outil d'ajout d'une personne "<< endl;
+   cout <<"............................................."<< endl;
+
+   string p_nom;
+   cout <<"Entrer le nom de entraineur " << endl;
+   cin >> p_nom;
+   cin.ignore();//consomme le délimiteur qui est resté
+
+	string p_prenom;
+	cout <<"Entrer le prenom de entraineur " << endl;
+	cin >> p_prenom;
+
+
+	cin.ignore();//consomme le délimiteur qui est resté
+
+	string p_telephone;
+	char buffer[256];
+
+    cout <<"Entrer le numero de telephone de entraineur " << endl;
+    cin.getline(buffer, 256);
+    p_telephone = buffer;
+
+	long p_jourNaissance;
+	long p_moisNaissance;
+	long p_anneeNaissance;
+
+	cout <<"Veuillez entrer sa date de naissance " << endl;
+	cout <<"Le jour [1...31] ";
+	cin >>  p_jourNaissance;
+
+	cout <<"Le mois [1...12] ";
+	cin >> p_moisNaissance;
+
+	cout <<"L'année [1970...] ";
+	cin >> p_anneeNaissance;
+
+	string p_numRAMQ;
+    cout <<"Entrer le num RAMQ de entraineur " << endl;
+    cin >> p_numRAMQ;
+
+    cin.ignore();//consomme le délimiteur qui est resté
+
+    char p_sexe;
+    cout <<"Entrer le sexe de entraineur " << endl;
+    cin >> p_sexe;
+
+
+	util::Date uneDate(p_jourNaissance, p_moisNaissance, p_anneeNaissance);/* Creation d'un objet Date */
+
+
+	/*Creation d'un objet Entraineur*/
+
+	//hockey::Entraineur unEntraineur(p_nom,p_prenom,uneDate,p_telephone,p_numRAMQ,p_sexe);
+
+	/*Affichage des Informations de l'objet*/
+
+	//cout <<unEntraineur.reqPesonneFormatee()<< endl;
+
+
+	/*Creation d'un objet Jouer */
+
+	cout <<"Bienvenue dans l'outil d'ajout de Joueur "<< endl;
+	   cout <<"............................................."<< endl;
+
+	   string p_nom;
+	   cout <<"Entrer le nom de Joueur " << endl;
+	   cin >> p_nom;
+	  // cin.ignore();//consomme le délimiteur qui est resté
+
+		string p_prenom;
+		cout <<"Entrer le prenom de Joueur " << endl;
+		cin >> p_prenom;
+
+
+		string p_position;
+		cout <<"Entrer la position du jouer " << endl;
+		cin >> p_position;
+
+
+		cin.ignore();//consomme le délimiteur qui est resté
+
+		string p_telephone;
+		char buffer[256];
+
+	    cout <<"Entrer le numero de telephone de Joueur " << endl;
+	    cin.getline(buffer, 256);
+	    p_telephone = buffer;
+
+
+	    cin.ignore();//consomme le délimiteur qui est resté
+
+
+		long p_jourNaissance;
+		long p_moisNaissance;
+		long p_anneeNaissance;
+
+		cout <<"Veuillez entrer sa date de naissance " << endl;
+		cout <<"Le jour [1...31] ";
+		cin >>  p_jourNaissance;
+
+		cout <<"Le mois [1...12] ";
+		cin >> p_moisNaissance;
+
+		cout <<"L'année [1970...] ";
+		cin >> p_anneeNaissance;
+
+
+		cin.ignore();//consomme le délimiteur qui est resté
+
+		string p_nomClub;
+		char bufferClub[256];
+
+		cout <<"Entrer le nom du club" << endl;
+		cin.getline(bufferClub, 256);
+		p_nomClub = bufferClub;
+
+
+		util::Date uneDate(p_jourNaissance, p_moisNaissance, p_anneeNaissance);/* Creation d'un objet Date */
+
+	// Personne* unJoueur = new Joueur(p_nom,p_prenom,uneDate,p_telephone,p_position);
+
+	/*Affichage des Informations de l'objet*/
+
+	//cout <<unJoueur.reqPesonneFormatee()<< endl;
+
+	Joueur unJoueur(p_nom,p_prenom,uneDate,p_telephone,p_position);
+
+  Annuaire unAnnuaire(p_nomClub);
+
+  unAnnuaire.ajouterPersonne(unJoueur);
+
+
+
+  Joueur autreJoueur = unJoueur;
+
+  autreJoueur.asgTelephone("418 456-6789");
+
+  unAnnuaire.ajouterPersonne(autreJoueur);
+
+
+  cout<<unAnnuaire.reqAnnuaireFormate()<<endl;
+
+
+         map<string, int> positions;
+
+        	positions["ailier"] =1;
+      	positions["centre"]    =2;
+      	positions["defenseur"] =3;
+      	positions["gardien"]   =4;
+
+      if (positions.find("goal") != positions.end())
+      {
+
+      }
+
+
+
+
+
+   }
+   catch (ContratException& e)
+   {
+      cout << e.reqTexteException() << endl;//traitement de l'erreur de contrat
+
+   }
+   return 0;
+}

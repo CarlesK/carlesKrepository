@@ -1,0 +1,10 @@
+20:13:12 **** Rebuild of configuration Debug for project Testeur ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -DNDEBUG -I/home/etudiant/Bureau/TP3/Source -include/home/etudiant/Bureau/TP3/Source/Annuaire.h -include/home/etudiant/Bureau/TP3/Source/Entraineur.h -include/home/etudiant/Bureau/TP3/Source/Joueur.h -O0 -g3 -Wall -c -fmessage-length=0 -o AnnuaireTesteur.o ../AnnuaireTesteur.cpp 
+g++ -std=c++1y -DNDEBUG -I/home/etudiant/Bureau/TP3/Source/Debug -include/home/etudiant/Bureau/TP3/Source/Date.h -include/home/etudiant/Bureau/TP3/Source/Joueur.h -include/home/etudiant/Bureau/TP3/Source/Entraineur.h -include/home/etudiant/Bureau/TP3/Source/Personne.h -O0 -g3 -Wall -c -fmessage-length=0 -o PersonneTesteur.o ../PersonneTesteur.cpp 
+g++ -std=c++1y -DNDEBUG -I/home/etudiant/Bureau/TP3/Source -include/home/etudiant/Bureau/TP3/Source/Joueur.h -include/home/etudiant/Bureau/TP3/Source/Date.h -include/home/etudiant/Bureau/TP3/Source/Entraineur.h -O0 -g3 -Wall -c -fmessage-length=0 -o JoueurTesteur.o ../JoueurTesteur.cpp 
+g++ -std=c++1y -DNDEBUG -I/home/etudiant/Bureau/TP3/Source -include/home/etudiant/Bureau/TP3/Source/Entraineur.h -include/home/etudiant/Bureau/TP3/Source/Date.h -include/home/etudiant/Bureau/TP3/Source/Entraineur.h -O0 -g3 -Wall -c -fmessage-length=0 -o EntraineurTesteur.o ../EntraineurTesteur.cpp 
+g++ -L/home/etudiant/Bureau/TP3/Source/Debug -o Testeur AnnuaireTesteur.o EntraineurTesteur.o JoueurTesteur.o PersonneTesteur.o -lSource -lgtest_main -lgtest -lpthread 
+
+20:13:24 Build Finished (took 11s.935ms)
+

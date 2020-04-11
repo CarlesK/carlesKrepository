@@ -1,0 +1,50 @@
+/*
+ * Joueur.cpp
+ *
+ *  Created on: 2020-03-20
+ *      Author: etudiant
+ */
+
+#include "Personne.h"
+#include "Joueur.h"
+#include "validationFormat.h"
+#include <sstream>
+#include <iostream>
+#include "Date.h"
+
+
+using namespace std;
+
+using namespace util;
+
+namespace hockey
+{
+
+
+  Joueur::Joueur(string p_nom, string p_prenom, util::Date p_dateNaissance,string p_telephone,string p_position):
+    		   Personne( p_nom, p_prenom, p_dateNaissance,p_telephone),m_position(p_position)
+	{
+	}
+
+  Joueur:: Joueur(const Joueur& p_Joueur):Personne(p_Joueur),m_numRAMQ(p_Entraineur.m_numRAMQ),m_sexe(p_Entraineur.m_sexe)
+      {
+      	Date cDate;
+      	PRECONDITION(((cDate -(p_Entraineur.reqDateNaissance()))/ (Date::estBissextile(cDate.reqAnnee())? 366 : 365)) >=19 )//conditio de majorite
+         INVARIANTS();
+      }
+
+  	 Joueur:: ~Joueur()
+  	{
+
+  	}
+
+
+
+
+
+
+
+
+
+
+}

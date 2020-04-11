@@ -1,0 +1,54 @@
+20:53:01 **** Build of configuration Debug for project Testeurxx ****
+make all 
+Building target: Testeurxx
+Invoking: GCC C++ Linker
+g++  -o "Testeurxx"  ./PersonneTesteur.o   
+/usr/lib/gcc/i686-linux-gnu/7/../../../i386-linux-gnu/Scrt1.o : Dans la fonction « _start » :
+(.text+0x28) : référence indéfinie vers « main »
+./PersonneTesteur.o : Dans la fonction « PersonneConstructeur_ConstructeurParametres_Test::TestBody() » :
+/home/etudiant/Bureau/TP3/Testeur/Debug/../PersonneTesteur.cpp:13 : référence indéfinie vers « util::Date::Date(long, long, long) »
+/home/etudiant/Bureau/TP3/Testeur/Debug/../PersonneTesteur.cpp:14 : référence indéfinie vers « hockey::Entraineur::Entraineur(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, util::Date, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char) »
+/home/etudiant/Bureau/TP3/Testeur/Debug/../PersonneTesteur.cpp:15 : référence indéfinie vers « hockey::Entraineur::Entraineur(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, util::Date, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char) »
+/home/etudiant/Bureau/TP3/Testeur/Debug/../PersonneTesteur.cpp:16 : référence indéfinie vers « hockey::Personne::asgTelephone(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) »
+/home/etudiant/Bureau/TP3/Testeur/Debug/../PersonneTesteur.cpp:17 : référence indéfinie vers « hockey::Personne::reqTelephone[abi:cxx11]() const »
+/home/etudiant/Bureau/TP3/Testeur/Debug/../PersonneTesteur.cpp:17 : référence indéfinie vers « testing::Message::Message() »
+/home/etudiant/Bureau/TP3/Testeur/Debug/../PersonneTesteur.cpp:17 : référence indéfinie vers « testing::internal::AssertHelper::AssertHelper(testing::TestPartResult::Type, char const*, int, char const*) »
+/home/etudiant/Bureau/TP3/Testeur/Debug/../PersonneTesteur.cpp:17 : référence indéfinie vers « testing::internal::AssertHelper::operator=(testing::Message const&) const »
+/home/etudiant/Bureau/TP3/Testeur/Debug/../PersonneTesteur.cpp:17 : référence indéfinie vers « testing::internal::AssertHelper::~AssertHelper() »
+/home/etudiant/Bureau/TP3/Testeur/Debug/../PersonneTesteur.cpp:18 : référence indéfinie vers « hockey::Personne::operator==(hockey::Personne const&) const »
+/home/etudiant/Bureau/TP3/Testeur/Debug/../PersonneTesteur.cpp:18 : référence indéfinie vers « testing::Message::Message() »
+/home/etudiant/Bureau/TP3/Testeur/Debug/../PersonneTesteur.cpp:18 : référence indéfinie vers « testing::internal::GetBoolAssertionFailureMessage[abi:cxx11](testing::AssertionResult const&, char const*, char const*, char const*) »
+/home/etudiant/Bureau/TP3/Testeur/Debug/../PersonneTesteur.cpp:18 : référence indéfinie vers « testing::internal::AssertHelper::AssertHelper(testing::TestPartResult::Type, char const*, int, char const*) »
+/home/etudiant/Bureau/TP3/Testeur/Debug/../PersonneTesteur.cpp:18 : référence indéfinie vers « testing::internal::AssertHelper::operator=(testing::Message const&) const »
+/home/etudiant/Bureau/TP3/Testeur/Debug/../PersonneTesteur.cpp:18 : référence indéfinie vers « testing::internal::AssertHelper::~AssertHelper() »
+/home/etudiant/Bureau/TP3/Testeur/Debug/../PersonneTesteur.cpp:18 : référence indéfinie vers « hockey::Entraineur::~Entraineur() »
+/home/etudiant/Bureau/TP3/Testeur/Debug/../PersonneTesteur.cpp:15 : référence indéfinie vers « hockey::Entraineur::~Entraineur() »
+/home/etudiant/Bureau/TP3/Testeur/Debug/../PersonneTesteur.cpp:17 : référence indéfinie vers « testing::internal::AssertHelper::~AssertHelper() »
+/home/etudiant/Bureau/TP3/Testeur/Debug/../PersonneTesteur.cpp:18 : référence indéfinie vers « testing::internal::AssertHelper::~AssertHelper() »
+/home/etudiant/Bureau/TP3/Testeur/Debug/../PersonneTesteur.cpp:15 : référence indéfinie vers « hockey::Entraineur::~Entraineur() »
+/home/etudiant/Bureau/TP3/Testeur/Debug/../PersonneTesteur.cpp:14 : référence indéfinie vers « hockey::Entraineur::~Entraineur() »
+./PersonneTesteur.o : Dans la fonction « __static_initialization_and_destruction_0(int, int) » :
+/home/etudiant/Bureau/TP3/Testeur/Debug/../PersonneTesteur.cpp:12 : référence indéfinie vers « testing::internal::GetTestTypeId() »
+/home/etudiant/Bureau/TP3/Testeur/Debug/../PersonneTesteur.cpp:12 : référence indéfinie vers « testing::internal::MakeAndRegisterTestInfo(char const*, char const*, char const*, char const*, void const*, void (*)(), void (*)(), testing::internal::TestFactoryBase*) »
+./PersonneTesteur.o : Dans la fonction « testing::internal::PrintTo(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::ostream*) » :
+/usr/include/gtest/gtest-printers.h:465 : référence indéfinie vers « testing::internal::PrintStringTo(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::ostream*) »
+./PersonneTesteur.o : Dans la fonction « PersonneConstructeur_ConstructeurParametres_Test::PersonneConstructeur_ConstructeurParametres_Test() » :
+/home/etudiant/Bureau/TP3/Testeur/Debug/../PersonneTesteur.cpp:12 : référence indéfinie vers « testing::Test::Test() »
+./PersonneTesteur.o : Dans la fonction « testing::internal::scoped_ptr<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::reset(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) » :
+/usr/include/gtest/internal/gtest-port.h:912 : référence indéfinie vers « testing::internal::IsTrue(bool) »
+./PersonneTesteur.o : Dans la fonction « testing::internal::scoped_ptr<std::__cxx11::basic_stringstream<char, std::char_traits<char>, std::allocator<char> > >::reset(std::__cxx11::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >*) » :
+/usr/include/gtest/internal/gtest-port.h:912 : référence indéfinie vers « testing::internal::IsTrue(bool) »
+./PersonneTesteur.o : Dans la fonction « testing::AssertionResult testing::internal::CmpHelperEQ<char [8], std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >(char const*, char const*, char const (&) [8], std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) » :
+/usr/include/gtest/gtest.h:1449 : référence indéfinie vers « testing::AssertionSuccess() »
+/usr/include/gtest/gtest.h:1460 : référence indéfinie vers « testing::internal::EqFailure(char const*, char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) »
+./PersonneTesteur.o:(.data.rel.ro._ZTV48PersonneConstructeur_ConstructeurParametres_Test[_ZTV48PersonneConstructeur_ConstructeurParametres_Test]+0x10) : référence indéfinie vers « testing::Test::SetUp() »
+./PersonneTesteur.o:(.data.rel.ro._ZTV48PersonneConstructeur_ConstructeurParametres_Test[_ZTV48PersonneConstructeur_ConstructeurParametres_Test]+0x14) : référence indéfinie vers « testing::Test::TearDown() »
+./PersonneTesteur.o : Dans la fonction « PersonneConstructeur_ConstructeurParametres_Test::~PersonneConstructeur_ConstructeurParametres_Test() » :
+/home/etudiant/Bureau/TP3/Testeur/Debug/../PersonneTesteur.cpp:12 : référence indéfinie vers « testing::Test::~Test() »
+./PersonneTesteur.o:(.data.rel.ro._ZTI48PersonneConstructeur_ConstructeurParametres_Test[_ZTI48PersonneConstructeur_ConstructeurParametres_Test]+0x8) : référence indéfinie vers « typeinfo for testing::Test »
+collect2: error: ld returned 1 exit status
+makefile:44: recipe for target 'Testeurxx' failed
+make: *** [Testeurxx] Error 1
+
+20:53:03 Build Finished (took 1s.280ms)
+

@@ -1,0 +1,16 @@
+/*
+ * AnnuaireTesteur.cpp
+ *
+ *  Created on: 2020-03-29
+ *      Author: etudiant
+ */
+
+
+#include<gtest/gtest.h>
+
+
+TEST(AnnuaireConstructeur,ConstructeurParametres)
+{   Date uneDate(01, 01, 1970);
+    hockey::Entraineur  unEntraineur("Bonneau","Jean",uneDate,"514 369-9874","BONJ 7001 0112",'M');
+	ASSERT_TRUE(unEntraineur.reqDateNaissance().estBissextile(1980));
+}

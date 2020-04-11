@@ -1,0 +1,256 @@
+#include "Personne.h"
+#include "Entraineur.h"
+#include "Joueur.h"
+#include "Annuaire.h"
+#include "ContratException.h"
+#include "Date.h"
+#include "validationFormat.h"
+#include <iostream>
+#include <string>
+#include <ctime>
+#include <map>
+
+using namespace hockey;
+using namespace util;
+
+using namespace std;
+int main()
+{
+   try
+   {
+
+   cout <<"Bienvenue dans l'outil d'ajout d'une personne "<< endl;
+   cout <<"............................................."<< endl;
+
+   string p_nomJoueur;
+   cout <<"Entrer le nom du Joueur " << endl;
+
+   cin >> p_nomJoueur;
+
+   conversionMajuscule(p_nomJoueur);
+
+   string p_prenomJoueur;
+   cout <<"Entrer le prenom du Joueur " << endl;
+   cin >> p_prenomJoueur;
+
+
+   cin.ignore();//consomme le délimiteur qui est resté
+
+   string p_telephoneJoueur;
+   char bufferTelJoueur[256];
+
+   cout <<" Entrer le numero de telephone du joueur " << endl;
+   cin.getline(bufferTelJoueur, 256);
+   p_telephoneJoueur = bufferTelJoueur;
+
+
+	while(!util::validerTelephone(p_telephoneJoueur))
+	{
+		cout <<" Le numéro de téléphone doit avoir un format national canadien" << endl;
+		cout <<" Entrer le numero de telephone du joueur " << endl;
+		 cin.getline(bufferTelJoueur, 256);
+		 p_telephoneJoueur = bufferTelJoueur;
+	}
+
+
+   	long p_jourNaissanceJoueur;
+   	long p_moisNaissanceJoueur;
+   	long p_anneeNaissanceJoueur;
+
+   	cout <<" Veuillez entrer sa date de naissance " << endl;
+   	cout <<" Le jour [1...31] ";
+   	cin >>  p_jourNaissanceJoueur;
+
+   	cout <<"Le mois [1...12] ";
+   	cin >> p_moisNaissanceJoueur;
+
+   	cout <<"L'année [1970...] ";
+   	cin >> p_anneeNaissanceJoueur;
+
+
+    //cin.ignore();//consomme le délimiteur qui est resté
+
+   	Date cDate;
+
+   	Date dateJoueur(p_jourNaissanceJoueur, p_moisNaissanceJoueur, p_anneeNaissanceJoueur);
+    bool estJoueurValide;
+
+    estJoueurValide = ((cDate - dateJoueur)/ (Date::estBissextile(cDate.reqAnnee())? 366 : 365)) >=15 && ((cDate - dateJoueur)/ (Date::estBissextile(cDate.reqAnnee())? 366 : 365)) <=17 ;
+
+
+	while(!Date::validerDate(p_jourNaissanceJoueur,p_moisNaissanceJoueur,p_anneeNaissanceJoueur)||!estJoueurValide)
+	{
+		cout <<" Date invalide, le joueur doit être agé entre 15 et 17 ans" << endl;
+		cout <<" Veuillez entrer sa date de naissance " << endl;
+
+		cout <<" Le jour [1...31] ";
+		cin >> p_jourNaissanceJoueur;
+
+		cout <<" Le mois [1...12] ";
+		cin >> p_moisNaissanceJoueur;
+
+		cout <<" L'année [1970...] ";
+		cin >> p_anneeNaissanceJoueur;
+	 }
+
+	 cin.ignore();//consomme le délimiteur qui est resté
+
+	map<string, int> positions;
+
+	positions["ailier"]    =1;
+	positions["centre"]    =2;
+	positions["defenseur"] =3;
+	positions["gardien"]   =4;
+
+	string p_position;
+	char bufferPosjoueur[256];
+	cout <<" Entrez la position du joueur" << endl;
+	cin.getline(bufferPosjoueur, 256);
+	p_position = bufferPosjoueur;
+
+
+	while(positions.find(conversionMinuscule(p_position)) == positions.end())
+	{
+	     cout <<" La position du joueur est invalide " << endl;
+		 cout <<"  Entrez la position du joueur " << endl;
+		 cin.getline(bufferPosjoueur, 256);
+		 p_position = bufferPosjoueur;
+	}
+
+
+	string p_nomEntraineur;
+	cout <<" Entrez le nom de l'entraîneur " << endl;
+	cin >> p_nomEntraineur;
+
+	string p_prenomEntraineur;
+	cout <<"Entrez le prénom de l'entraîneur " << endl;
+	cin >> p_prenomEntraineur;
+
+	cin.ignore();//consomme le délimiteur qui est resté
+
+	string p_telephoneEntraineur;
+	char bufferEntraineur[256];
+
+	cout <<" Entrez le numero de téléphone de l'entraîneur " << endl;
+	cin.getline(bufferEntraineur, 256);
+	p_telephoneEntraineur = bufferEntraineur;
+
+
+    while(!util::validerTelephone(p_telephoneEntraineur))
+	{
+		cout <<" Le numéro de téléphone doit avoir un format national canadien" << endl;
+		cout <<"  Entrez le numero de téléphone de l'entraîneur " << endl;
+		cin.getline(bufferEntraineur, 256);
+	    p_telephoneEntraineur = bufferEntraineur;
+	}
+
+   	long p_jourNaissanceEntraineur;
+   	long p_moisNaissanceEntraineur;
+   	long p_anneeNaissanceEntraineur;
+
+   	cout <<" Veuillez entrer sa date de naissance " << endl;
+   	cout <<" Le jour [1...31] ";
+   	cin >>  p_jourNaissanceEntraineur;
+
+   	cout <<"Le mois [1...12] ";
+   	cin >> p_moisNaissanceEntraineur;
+
+   	cout <<"L'année [1970...] ";
+   	cin >> p_anneeNaissanceEntraineur;
+
+
+    //cin.ignore();//consomme le délimiteur qui est resté
+
+   	Date dateEntraineur(p_jourNaissanceEntraineur, p_moisNaissanceEntraineur, p_anneeNaissanceEntraineur);
+    bool estEntraineurValide;
+
+    estEntraineurValide = ((cDate - dateEntraineur)/ (Date::estBissextile(cDate.reqAnnee())? 366 : 365)) >=19;
+
+
+	while(!Date::validerDate(p_jourNaissanceEntraineur,p_moisNaissanceEntraineur,p_anneeNaissanceEntraineur)||!estEntraineurValide)
+	{
+		cout <<" La date n'est pas valide ou ne correspond pas à la date de naissance d'une personne majeure" << endl;
+		cout <<" Veuillez entrer sa date de naissance " << endl;
+
+		cout <<" Le jour [1...31] ";
+		cin >> p_jourNaissanceEntraineur;
+
+		cout <<" Le mois [1...12] ";
+		cin >> p_moisNaissanceEntraineur;
+
+		cout <<" L'année [1970...] ";
+		cin >> p_anneeNaissanceEntraineur;
+	 }
+
+
+    cin.ignore();//consomme le délimiteur qui est resté
+
+    char p_sexe;
+    cout <<" Veuillez entrer le sexe de l'entraineur : (M ou F )" << endl;
+    cin >> p_sexe;
+
+    while(p_sexe!='F' && p_sexe!='M')
+   	{
+   		cout <<" Format de sexe Invalide" << endl;
+   		cout <<" Veuillez entrer le sexe de l'entraineur : (M ou F )" << endl;
+   		cin >> p_sexe;
+   	}
+
+    cin.ignore();//consomme le délimiteur qui est resté
+
+    string p_numRAMQ;
+    char bufferRAMQJoueur[256];
+    cout <<" Entrez le numéro de RAMQ de l'entraîneur " << endl;
+    cin.getline(bufferRAMQJoueur, 256);
+    p_numRAMQ = bufferRAMQJoueur;
+
+
+    bool estRAMQValide = validerNumRAMQ(p_numRAMQ, p_nomEntraineur, p_prenomEntraineur, p_jourNaissanceEntraineur, p_moisNaissanceEntraineur, p_anneeNaissanceEntraineur, p_sexe);
+
+    while(!estRAMQValide)
+	{
+		cout <<" Le numéro de RAMQ de l'entraîneur ne st pas valide" << endl;
+		cout <<" Entrez le numéro de RAMQ de l'entraîneur  " << endl;
+		cin.getline(bufferRAMQJoueur, 256);
+		p_numRAMQ = bufferRAMQJoueur;
+	}
+
+    cin.ignore();//consomme le délimiteur qui est resté
+
+    string p_nomClub;
+    char bufferClub[256];
+
+    cout <<"Entrer le nom du club" << endl;
+    cin.getline(bufferClub, 256);
+    p_nomClub = bufferClub;
+
+
+    Joueur unJoueur = Joueur(p_nomJoueur,p_prenomJoueur,dateJoueur,p_telephoneJoueur,p_position);
+	 //Date dateEntraineur(p_jourNaissanceEntraineur, p_moisNaissanceEntraineur, p_anneeNaissanceEntraineur);
+
+		/*Affichage des Informations de l'objet*/
+
+		//cout <<unJoueur->reqPesonneFormatee()<<endl;
+
+ 	/*Creation d'un objet Entraineur*/
+
+   Entraineur unEntraineur(p_nomEntraineur,p_prenomEntraineur,dateEntraineur,p_telephoneEntraineur,p_numRAMQ,p_sexe);
+
+
+   /*Affichage des Informations de l'objet*/
+
+    Annuaire unAnnuaire(p_nomClub);
+
+    unAnnuaire.ajouterPersonne(unJoueur);
+    unAnnuaire.ajouterPersonne(unEntraineur);
+
+    cout<<unAnnuaire.reqAnnuaireFormate()<<endl;
+
+   }
+   catch (ContratException& e)
+   {
+      cout << e.reqTexteException() << endl;//traitement de l'erreur de contrat
+
+   }
+   return 0;
+}
