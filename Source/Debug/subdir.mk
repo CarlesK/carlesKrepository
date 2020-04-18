@@ -10,6 +10,7 @@ CPP_SRCS += \
 ../Entraineur.cpp \
 ../Joueur.cpp \
 ../Personne.cpp \
+../PersonneException.cpp \
 ../validationFormat.cpp 
 
 OBJS += \
@@ -19,6 +20,7 @@ OBJS += \
 ./Entraineur.o \
 ./Joueur.o \
 ./Personne.o \
+./PersonneException.o \
 ./validationFormat.o 
 
 CPP_DEPS += \
@@ -28,6 +30,7 @@ CPP_DEPS += \
 ./Entraineur.d \
 ./Joueur.d \
 ./Personne.d \
+./PersonneException.d \
 ./validationFormat.d 
 
 

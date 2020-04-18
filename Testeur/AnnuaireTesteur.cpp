@@ -6,6 +6,7 @@
  */
 
 #include<gtest/gtest.h>
+#include<Annuaire.h>
 using namespace hockey;
 using namespace util;
 
@@ -96,6 +97,29 @@ TEST_F(AnnuaireValide,reqAnnuaireFormate)
 
 
 
+/**
+ * \brief Test de la méthodebool PersonneEstDejaPresente(const Personne& p_personne) const;
+ *
+ */
+
+TEST_F(AnnuaireValide,PersonneDejaPresente)
+{
+	Entraineur  unEntraineur("Bocquet","Bill",Date(01, 01, 1970),"514 369-9874","BOCB 7001 0112",'M');
+
+
+	//unAnnuaire.ajouterPersonne(unEntraineur);
+
+	try
+	   {
+		unAnnuaire.ajouterPersonne(unEntraineur);
+	   }
+	   catch(std::exception const& e)
+	   {
+	       cerr << "ERREUR : " << e.what() << endl;
+	   }
+
+
+}
 
 
 

@@ -10,7 +10,11 @@
 #include <sstream>
 #include <iostream>
 #include "Date.h"
+#include "PersonneException.h"
 #include<iterator>
+#include <algorithm>
+#include <vector>
+
 
 using namespace std;
 using namespace util;
@@ -55,12 +59,14 @@ namespace hockey
      }
 
     void Annuaire::ajouterPersonne(const Personne& p_personne)
-    {  if (!PersonneEstDejaPresente( p_personne))
+    {
+     if (!PersonneEstDejaPresente(p_personne))
       {
     	 m_vMembres.push_back(p_personne.clone());
       }
      else
       {
+    	 throw PersonneDejaPresentException (p_personne.reqPesonneFormatee());
       }
     }
 
@@ -85,12 +91,12 @@ namespace hockey
        return (*this);
     }
 
-    bool PersonneEstDejaPresente(const Personne& p_personne) const
+    bool Annuaire::PersonneEstDejaPresente(const Personne& p_personne) const
     {
+    	auto  result = std::find(m_vMembres.begin(), m_vMembres.end(), p_personne.clone());
 
-
-
-    }
+    	return (result != m_vMembres.end());
+	}
 
 
     string Annuaire::reqAnnuaireFormate() const
