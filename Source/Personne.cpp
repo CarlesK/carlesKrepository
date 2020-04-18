@@ -11,12 +11,13 @@
 #include <sstream>
 #include <iostream>
 using namespace std;
+using namespace util;
 
 namespace hockey
 {
 /**
  * \brief constructeur avec paramètres
- * 		  On construit un objet Personne à partir de valeurs passées en paramètres.
+ * 		  On construit un objet implementatnt la clase abstraite Personne à partir de valeurs passées en paramètres.
  * \param[in] m_nom est une chaine de caractere qui représente le nom de la personne
  * \param[in] m_prenom est une chaine de caractere qui représente le prenom de la personne
  * \param[in] m_dateNaissance est uun objet Date qui représente la date de naissancede la personne
@@ -122,12 +123,12 @@ namespace hockey
 	 * \param[in] p_personne qui est une personne valide
 	 * \return un booléen indiquant si les nom prenom et date de naissance de deux personnes  sont égaux ou pas
 	 */
-
 	bool Personne:: operator ==(const Personne& p_personne) const
 	{
-		return (util::conversionMinuscule(m_nom) == util::conversionMinuscule(p_personne.m_nom))
-				&& (util::conversionMinuscule(m_prenom) == util::conversionMinuscule(p_personne.m_prenom))
-				&& (m_dateNaissance == p_personne.m_dateNaissance);
+
+		return ((conversionMinuscule(this->m_nom)) == (conversionMinuscule(p_personne.reqNom())))
+			   && ((conversionMinuscule(this->m_prenom) == conversionMinuscule(p_personne.reqPrenom())))
+			   && (this->m_dateNaissance == p_personne.reqDateNaissance());
 	}
 
 
@@ -135,9 +136,7 @@ namespace hockey
 	{
 	    INVARIANT(!reqNom().empty());
 		INVARIANT(!reqPrenom().empty());
-
 	}
-
 
 }
 

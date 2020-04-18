@@ -16,6 +16,7 @@
 #ifndef PERSONNE_H_
 #define PERSONNE_H_
 #include "Date.h"
+#include "ContratException.h"
 #include <string>
 using namespace std;
 
@@ -33,7 +34,7 @@ namespace hockey
 		const string& reqTelephone() const;
 		void asgTelephone(const std::string& telephone);
 		virtual string reqPesonneFormatee() const;
-		bool operator ==(const Personne& p_personne) const;
+		bool operator ==(const Personne & p_personne) const;
 		virtual Personne* clone() const = 0;
 
 	 protected:

@@ -22,7 +22,9 @@ namespace hockey
     Entraineur::Entraineur(string p_nom, string p_prenom, util::Date p_dateNaissance,string p_telephone,string p_numRAMQ,char p_sexe ):
     		    Personne( p_nom, p_prenom, p_dateNaissance,p_telephone),m_numRAMQ(p_numRAMQ),m_sexe(p_sexe)
 	{  PRECONDITION(util::validerNumRAMQ(p_numRAMQ,p_nom,p_prenom,p_dateNaissance.reqJourAnnee(),p_dateNaissance.reqMois(),p_dateNaissance.reqAnnee(),p_sexe));
-	    INVARIANTS();
+	   Date cDate;
+	   PRECONDITION(((cDate - p_dateNaissance)/ (Date::estBissextile(cDate.reqAnnee())? 366 : 365)) >= 19 )//condition de majorite
+	   INVARIANTS();
 	}
 
     /**
@@ -30,14 +32,14 @@ namespace hockey
     Entraineur:: Entraineur(const Entraineur& p_Entraineur):Personne(p_Entraineur),m_numRAMQ(p_Entraineur.m_numRAMQ),m_sexe(p_Entraineur.m_sexe)
     {
     	Date cDate;
-    	PRECONDITION(((cDate -(p_Entraineur.reqDateNaissance()))/ (Date::estBissextile(cDate.reqAnnee())? 366 : 365)) >=19 )//conditio de majorite
-       INVARIANTS();
+    	PRECONDITION(((cDate -(p_Entraineur.reqDateNaissance()))/ (Date::estBissextile(cDate.reqAnnee())? 366 : 365)) >=19 )//condition de majorite
+        INVARIANTS();
     }
 
 	 Entraineur:: ~Entraineur()
-	{
+	 {
 
-	}
+	 }
 
 	string Entraineur:: reqPesonneFormatee() const
 	{   string strNumRAMQ = conversionMajuscule(SupprimerEspaces(reqNumRAMQ()));
@@ -48,14 +50,12 @@ namespace hockey
 		os<<  strNumRAMQ.substr(8, 4)<< " " <<endl;
 
 		return Personne::reqPesonneFormatee() + "\n" + os.str();
-
 	}
 
 	const string& Entraineur::reqNumRAMQ() const
 	{
 		return m_numRAMQ;
 	}
-
 
 	const char& Entraineur::reqSexe() const
 	{
@@ -68,7 +68,6 @@ namespace hockey
 	{
 		INVARIANT(!reqNom().empty());
 		INVARIANT(!reqPrenom().empty());
-
 	}
 
 	  Personne*  Entraineur::clone() const

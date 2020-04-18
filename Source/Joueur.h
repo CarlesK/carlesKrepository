@@ -9,6 +9,7 @@
 #define JOUEUR_H_
 
 #include "Personne.h"
+#include "ContratException.h"
 
 namespace hockey
 {

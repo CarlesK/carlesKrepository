@@ -10,6 +10,7 @@
 using namespace std;
 #include <vector>
 #include "Personne.h"
+#include "ContratException.h"
 
 namespace hockey
 {
@@ -23,7 +24,8 @@ namespace hockey
     const string& reqNomClub() const;
     string reqAnnuaireFormate() const;
     void ajouterPersonne(const Personne& p_personne);
-
+    Annuaire& operator=(const Annuaire& v);
+    bool PersonneEstDejaPresente(const Personne& p_personne) const;
   private:
     string  m_nomClub;
     vector<Personne*> m_vMembres;

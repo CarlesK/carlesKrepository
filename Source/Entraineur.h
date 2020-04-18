@@ -7,7 +7,7 @@
 
 #ifndef ENTRAINEUR_H_
 #define ENTRAINEUR_H_
-
+#include "ContratException.h"
 #include "Personne.h"
 
 namespace hockey
@@ -27,7 +27,9 @@ namespace hockey
 
 		string reqPesonneFormatee() const;
 
+
 		virtual Personne* clone() const;
+
 
 		private:
 		string m_numRAMQ;

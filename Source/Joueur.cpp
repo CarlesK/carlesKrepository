@@ -21,7 +21,7 @@ using namespace util;
 namespace hockey
 {
 
-  Joueur::Joueur(string p_nom, string p_prenom, util::Date p_dateNaissance,string p_telephone,string p_position):
+  Joueur::Joueur(string p_nom, string p_prenom, Date p_dateNaissance,string p_telephone,string p_position):
     		   Personne( p_nom, p_prenom, p_dateNaissance,p_telephone),m_position(p_position)
 	{
 
@@ -37,7 +37,6 @@ namespace hockey
 	  positions["gardien"]   =4;
 
 	  PRECONDITION(positions.find(conversionMinuscule(p_position)) != positions.end());
-
 	  INVARIANTS();
 	}
 

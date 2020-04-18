@@ -216,7 +216,6 @@ int main()
 		estRAMQValide = validerNumRAMQ(p_numRAMQ, p_nomEntraineur, p_prenomEntraineur, p_jourNaissanceEntraineur, p_moisNaissanceEntraineur, p_anneeNaissanceEntraineur, p_sexe);
 	}
 
-
     string p_nomClub;
     char bufferNomClub[256];
 
@@ -245,7 +244,6 @@ int main()
    catch (ContratException& e)
    {
       cout << e.reqTexteException() << endl;//traitement de l'erreur de contrat
-
    }
    return 0;
 }
