@@ -13,7 +13,7 @@ using namespace std;
  * \brief Constructeur de la classe de base PersonneException
  * \param[in] raison Message décrivant l'erreur
  */
-PersonneException::PersonneException(const std::string& raison) :runtime_error(raison){}
+PersonneException::PersonneException(const std::string& raison) : std::runtime_error(raison){}
 
 /**
  * \brief Constructeur de la classe PersonneDejaPresentException \n

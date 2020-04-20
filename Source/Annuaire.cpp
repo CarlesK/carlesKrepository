@@ -60,6 +60,7 @@ namespace hockey
 
     void Annuaire::ajouterPersonne(const Personne& p_personne)
     {
+
      if (!PersonneEstDejaPresente(p_personne))
       {
     	 m_vMembres.push_back(p_personne.clone());
@@ -69,6 +70,7 @@ namespace hockey
     	 throw PersonneDejaPresentException (p_personne.reqPesonneFormatee());
       }
     }
+
 
     void Annuaire :: verifieInvariant() const
      {
@@ -93,9 +95,18 @@ namespace hockey
 
     bool Annuaire::PersonneEstDejaPresente(const Personne& p_personne) const
     {
-    	auto  result = std::find(m_vMembres.begin(), m_vMembres.end(), p_personne.clone());
+        bool trouve = false;
 
-    	return (result != m_vMembres.end());
+    	for (unsigned int  i=0; i< m_vMembres.size(); i++)
+        {
+			if (*(m_vMembres[i]) == p_personne)
+			{
+				trouve = true;
+				break;
+			}
+    	}
+
+    	return trouve;
 	}
 
 

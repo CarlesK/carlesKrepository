@@ -35,4 +35,26 @@ class PersonneDejaPresentException: public PersonneException
 	PersonneDejaPresentException(const std::string& raison);
 };
 
+
+
+// --- Définition des macros de contrôle de la théorie du contrat
+
+#if !defined(NDEBUG)
+// --- Mode debug
+
+
+#  define PERSONNEEXCEPTION(f)     \
+      if (!(f)) throw PersonneException();
+#  define PERSONNEDEJAPRESENTE(f)  \
+      if (!(f)) throw PersonneDejaPresentException();
+
+
+// --- LE MODE RELEASE
+#else
+#  define PERSONNEEXCEPTION(f);
+#  define PERSONNEDEJAPRESENTE(f);
+
+#endif  // --- if !defined (NDEBUG)
+
+
 #endif /* PERSONNEEXCEPTION_H_ */

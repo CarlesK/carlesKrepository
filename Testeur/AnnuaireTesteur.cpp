@@ -7,6 +7,9 @@
 
 #include<gtest/gtest.h>
 #include<Annuaire.h>
+#include<Personne.h>
+#include<PersonneException.h>
+
 using namespace hockey;
 using namespace util;
 
@@ -89,35 +92,31 @@ TEST_F(AnnuaireValide,reqAnnuaireFormate)
 	unAnnuaire.ajouterPersonne(unEntraineur);
 	unAnnuaire.ajouterPersonne(unJoueur);
 
-	unAnnuaire.ajouterPersonne(unJoueur);
-	string msgInfos = "Club              : Winners de hockeyville\n------------------: \nNom               : Bocquet \nPrenom            : Bill \nDate de naissance : Jeudi le 01 janvier 1970 \nTelephone         : 514 369-9874\nNumero de RAMQ    : BOCB 7001 0112 \n------------------: \nNom               : BLO \nPrenom            : JOE \nDate de naissance : Samedi le 01 janvier 2005 \nTelephone         : 418 789-9874\nPosition          : centre \n------------------: \nNom               : BLO \nPrenom            : JOE \nDate de naissance : Samedi le 01 janvier 2005 \nTelephone         : 418 789-9874\nPosition          : centre \n------------------: \n";
+	string msgInfos = "Club              : Winners de hockeyville\n------------------: \nNom               : Bocquet \nPrenom            : Bill \nDate de naissance : Jeudi le 01 janvier 1970 \nTelephone         : 514 369-9874\nNumero de RAMQ    : BOCB 7001 0112 \n------------------: \nNom               : BLO \nPrenom            : JOE \nDate de naissance : Samedi le 01 janvier 2005 \nTelephone         : 418 789-9874\nPosition          : centre \n------------------: \n";
 
    ASSERT_EQ(msgInfos, unAnnuaire.reqAnnuaireFormate());
 }
 
 
-
 /**
- * \brief Test de la méthodebool PersonneEstDejaPresente(const Personne& p_personne) const;
+ * \brief Test de la méthode bool PersonneEstDejaPresente(const Personne& p_personne) const;
  *
  */
 
+
 TEST_F(AnnuaireValide,PersonneDejaPresente)
 {
-	Entraineur  unEntraineur("Bocquet","Bill",Date(01, 01, 1970),"514 369-9874","BOCB 7001 0112",'M');
-
-
-	//unAnnuaire.ajouterPersonne(unEntraineur);
+	Entraineur  unEntraineur("Bocquets","Bill",Date(01, 01, 1970),"514 369-9874","BOCB 7001 0112",'M');
+	unAnnuaire.ajouterPersonne(unEntraineur);
 
 	try
 	   {
 		unAnnuaire.ajouterPersonne(unEntraineur);
 	   }
-	   catch(std::exception const& e)
+	   catch(PersonneException const& e)
 	   {
-	       cerr << "ERREUR : " << e.what() << endl;
+	       cout << "ERREUR : " << e.what() << endl;
 	   }
-
 
 }
 

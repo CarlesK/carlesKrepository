@@ -8,6 +8,7 @@
 #include <iostream>
 #include <string>
 #include <ctime>
+#include<PersonneException.h>
 #include <map>
 
 using namespace hockey;
@@ -239,11 +240,20 @@ int main()
 
     cout<<unAnnuaire.reqAnnuaireFormate()<<endl;
 
+    unAnnuaire.ajouterPersonne(unJoueur);        //ajout volontaire d un doublon
+
+    cout<<unAnnuaire.reqAnnuaireFormate()<<endl;// re-visualisation e la base de donnee
+
    }
 
    catch (ContratException& e)
    {
-      cout << e.reqTexteException() << endl;//traitement de l'erreur de contrat
+      cout << e.reqTexteException() << endl;
    }
+   catch(PersonneException const& e)
+   {
+   	  cout << "ERREUR DOUBLON   :\n " << e.what() << endl;
+   	}
+
    return 0;
 }
