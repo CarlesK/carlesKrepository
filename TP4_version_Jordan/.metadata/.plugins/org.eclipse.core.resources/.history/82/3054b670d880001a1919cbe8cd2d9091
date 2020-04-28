@@ -1,0 +1,19 @@
+#ifndef AJOUTJOUEURINTERFACE_H
+#define AJOUTJOUEURINTERFACE_H
+
+#include <QtGui/QDialog>
+#include "ui_ajoutjoueurinterface.h"
+
+class AjoutJoueurInterface : public QDialog
+{
+    Q_OBJECT
+
+public:
+    AjoutJoueurInterface(QWidget *parent = 0);
+    ~AjoutJoueurInterface();
+
+private:
+    Ui::AjoutJoueurInterfaceClass ui;
+};
+
+#endif // AJOUTJOUEURINTERFACE_H

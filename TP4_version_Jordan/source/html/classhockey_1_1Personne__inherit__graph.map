@@ -1,0 +1,4 @@
+<map id="hockey::Personne" name="hockey::Personne">
+<area shape="rect" id="node2" href="$classhockey_1_1Entraineur.html" title="Cette classe sert au maintien et à la manipulation des entraineurs. Elle hérite de la classe Personne..." alt="" coords="5,80,136,107"/>
+<area shape="rect" id="node3" href="$classhockey_1_1Joueur.html" title="Cette classe sert au maintien et à la manipulation des joueurs. Elle hérite de la classe Personne..." alt="" coords="161,80,271,107"/>
+</map>

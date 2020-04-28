@@ -1,10 +1,90 @@
-20:13:12 **** Rebuild of configuration Debug for project Testeur ****
-Info: Internal Builder is used for build
-g++ -std=c++1y -DNDEBUG -I/home/etudiant/Bureau/TP3/Source -include/home/etudiant/Bureau/TP3/Source/Annuaire.h -include/home/etudiant/Bureau/TP3/Source/Entraineur.h -include/home/etudiant/Bureau/TP3/Source/Joueur.h -O0 -g3 -Wall -c -fmessage-length=0 -o AnnuaireTesteur.o ../AnnuaireTesteur.cpp 
-g++ -std=c++1y -DNDEBUG -I/home/etudiant/Bureau/TP3/Source/Debug -include/home/etudiant/Bureau/TP3/Source/Date.h -include/home/etudiant/Bureau/TP3/Source/Joueur.h -include/home/etudiant/Bureau/TP3/Source/Entraineur.h -include/home/etudiant/Bureau/TP3/Source/Personne.h -O0 -g3 -Wall -c -fmessage-length=0 -o PersonneTesteur.o ../PersonneTesteur.cpp 
-g++ -std=c++1y -DNDEBUG -I/home/etudiant/Bureau/TP3/Source -include/home/etudiant/Bureau/TP3/Source/Joueur.h -include/home/etudiant/Bureau/TP3/Source/Date.h -include/home/etudiant/Bureau/TP3/Source/Entraineur.h -O0 -g3 -Wall -c -fmessage-length=0 -o JoueurTesteur.o ../JoueurTesteur.cpp 
-g++ -std=c++1y -DNDEBUG -I/home/etudiant/Bureau/TP3/Source -include/home/etudiant/Bureau/TP3/Source/Entraineur.h -include/home/etudiant/Bureau/TP3/Source/Date.h -include/home/etudiant/Bureau/TP3/Source/Entraineur.h -O0 -g3 -Wall -c -fmessage-length=0 -o EntraineurTesteur.o ../EntraineurTesteur.cpp 
-g++ -L/home/etudiant/Bureau/TP3/Source/Debug -o Testeur AnnuaireTesteur.o EntraineurTesteur.o JoueurTesteur.o PersonneTesteur.o -lSource -lgtest_main -lgtest -lpthread 
-20:13:35 **** Incremental Build of configuration Debug for project Utilisation ****
+13:46:39 **** Build of project AnnuaireGUI ****
+make 
+/usr/lib/i386-linux-gnu/qt4/bin/qmake CONFIG+=debug_and_release -o Makefile AnnuaireGUI.pro
+make -f Makefile.Release
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/TP4_share/carlesKrepository/AnnuaireGUI »
+/usr/lib/i386-linux-gnu/qt4/bin/uic annuairegui.ui -o ui_annuairegui.h
+g++ -c -pipe -O2 -Wall -W -D_REENTRANT -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -Irelease -I. -o release/main.o main.cpp
+g++ -c -pipe -O2 -Wall -W -D_REENTRANT -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -Irelease -I. -o release/annuairegui.o annuairegui.cpp
+/usr/lib/i386-linux-gnu/qt4/bin/moc -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -Irelease -I. annuairegui.h -o release/moc_annuairegui.cpp
+g++ -c -pipe -O2 -Wall -W -D_REENTRANT -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -Irelease -I. -o release/moc_annuairegui.o release/moc_annuairegui.cpp
+g++ -Wl,-O1 -o AnnuaireGUI release/main.o release/annuairegui.o release/moc_annuairegui.o    -L/usr/lib/i386-linux-gnu -lQtGui -lQtCore -lpthread 
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/TP4_share/carlesKrepository/AnnuaireGUI »
+/usr/bin/qmake -recursive CONFIG+=debug_and_release GUI.pro 
+13:50:54 **** Clean-only build of project GUI ****
+make clean 
+make -f Makefile.Release clean
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/TP4_share/carlesKrepository/GUI »
+rm -f release/moc_gui.cpp
+rm -f ui_gui.h
+rm -f release/main.o release/gui.o release/moc_gui.o
+rm -f *~ core *.core
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/TP4_share/carlesKrepository/GUI »
+make -f Makefile.Debug clean
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/TP4_share/carlesKrepository/GUI »
+rm -f debug/moc_gui.cpp
+rm -f ui_gui.h
+rm -f debug/main.o debug/gui.o debug/moc_gui.o
+rm -f *~ core *.core
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/TP4_share/carlesKrepository/GUI »
+13:50:54 **** Build of project GUI ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/TP4_share/carlesKrepository/GUI »
+/usr/lib/i386-linux-gnu/qt4/bin/uic gui.ui -o ui_gui.h
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -Idebug -I. -o debug/main.o main.cpp
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -Idebug -I. -o debug/gui.o gui.cpp
+/usr/lib/i386-linux-gnu/qt4/bin/moc -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -Idebug -I. gui.h -o debug/moc_gui.cpp
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -Idebug -I. -o debug/moc_gui.o debug/moc_gui.cpp
+g++  -o GUI debug/main.o debug/gui.o debug/moc_gui.o    -L/usr/lib/i386-linux-gnu -lQtGui -lQtCore -lpthread 
+{ test -n "" && DESTDIR="" || DESTDIR=.; } && test $(gdb --version | sed -e 's,[^0-9][^0-9]*\([0-9]\)\.\([0-9]\).*,\1\2,;q') -gt 72 && gdb --nx --batch --quiet -ex 'set confirm off' -ex "save gdb-index $DESTDIR" -ex quit 'GUI' && test -f GUI.gdb-index && objcopy --add-section '.gdb_index=GUI.gdb-index' --set-section-flags '.gdb_index=readonly' 'GUI' 'GUI' && rm -f GUI.gdb-index || true
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/TP4_share/carlesKrepository/GUI »
+13:58:08 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+13:58:09 **** Build of project AnnuaireGUI ****
+make debug 
+/usr/lib/i386-linux-gnu/qt4/bin/qmake CONFIG+=debug_and_release -o Makefile AnnuaireGUI.pro
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/TP4/AnnuaireGUI »
+make[1]: rien à faire pour « first ».
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/TP4/AnnuaireGUI »
+Info: Nothing to build for Testeur
+13:58:09 **** Incremental Build of configuration Debug for project Utilisation ****
+make all 
+make: rien à faire pour « all ».
+13:58:20 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+13:58:20 **** Incremental Build of project AnnuaireGUI ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/TP4/AnnuaireGUI »
+make[1]: rien à faire pour « first ».
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/TP4/AnnuaireGUI »
+13:59:08 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+13:59:08 **** Incremental Build of project AnnuaireGUI ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/TP4/AnnuaireGUI »
+make[1]: rien à faire pour « first ».
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/TP4/AnnuaireGUI »
+Info: Nothing to build for Testeur
+13:59:08 **** Incremental Build of configuration Debug for project Utilisation ****
+make all 
+make: rien à faire pour « all ».
+13:59:38 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+13:59:38 **** Incremental Build of project AnnuaireGUI ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/TP4/AnnuaireGUI »
+make[1]: rien à faire pour « first ».
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/TP4/AnnuaireGUI »
+Info: Nothing to build for Testeur
+13:59:39 **** Incremental Build of configuration Debug for project Utilisation ****
 make all 
 make: rien à faire pour « all ».

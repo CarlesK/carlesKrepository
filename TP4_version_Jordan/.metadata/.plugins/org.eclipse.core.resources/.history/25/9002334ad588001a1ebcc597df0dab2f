@@ -1,0 +1,20 @@
+#ifndef AJOUTENTRAINEURINTERFACE_H
+#define AJOUTENTRAINEURINTERFACE_H
+
+#include <QtGui/QWidget>
+#include "ui_ajoutentraineurinterface.h"
+
+class AjoutEntraineurInterface : public QWidget
+{
+    Q_OBJECT
+
+public:
+    AjoutEntraineurInterface(QWidget *parent = 0);
+    ~AjoutEntraineurInterface();
+    QString reqNom();
+
+private:
+    Ui::AjoutEntraineurInterfaceClass ui;
+};
+
+#endif // AJOUTENTRAINEURINTERFACE_H

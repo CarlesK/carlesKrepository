@@ -1,0 +1,152 @@
+\hypertarget{classhockey_1_1Annuaire}{}\section{hockey\+:\+:Annuaire Class Reference}
+\label{classhockey_1_1Annuaire}\index{hockey\+::\+Annuaire@{hockey\+::\+Annuaire}}
+
+
+Cette classe sert à la gestion des personnes membres d\textquotesingle{}une équipe de hockey.  
+
+
+
+
+{\ttfamily \#include $<$Annuaire.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhockey_1_1Annuaire_ad81beccf0e9a6e54074ae0875360c25a}\label{classhockey_1_1Annuaire_ad81beccf0e9a6e54074ae0875360c25a}} 
+\hyperlink{classhockey_1_1Annuaire_ad81beccf0e9a6e54074ae0875360c25a}{Annuaire} ()
+\begin{DoxyCompactList}\small\item\em constructeur d\textquotesingle{}un objet annuaire sans paramètre. Ce constructeur permet d\textquotesingle{}initialiser une erreur de précondition si le constructeur sans paramètre est utilisé. \end{DoxyCompactList}\item 
+\hyperlink{classhockey_1_1Annuaire_ac756b17e484628d1e5386e9252f26d65}{Annuaire} (std\+::string p\+\_\+nom\+Club)
+\begin{DoxyCompactList}\small\item\em constructeur d\textquotesingle{}un objet annuaire avec le paramètre du nom de club. \end{DoxyCompactList}\item 
+const std\+::string \& \hyperlink{classhockey_1_1Annuaire_a72d2cf91ab310b2f36011ba4639bdcf3}{req\+Nom\+Club} () const
+\begin{DoxyCompactList}\small\item\em retourne le nom de l\textquotesingle{}équipe hockey. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classhockey_1_1Annuaire_acc3c0ae6f56007b2c54d3ef2765c6297}{req\+Annuaire\+Formate} () const
+\begin{DoxyCompactList}\small\item\em retourne le nom de l\textquotesingle{}équipe et les informations des membres. \end{DoxyCompactList}\item 
+\hyperlink{classhockey_1_1Annuaire_a9ced0f8c3c376e8e114ef04fd6b21e75}{Annuaire} (const \hyperlink{classhockey_1_1Annuaire}{Annuaire} \&p\+\_\+annuaire)
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe annuaire qui accepte en paramètre un annuaire. Ce type de constructeur permet de créer un nouvel annuaire avec les informations de l\textquotesingle{}annuaire passé en paramètre. \end{DoxyCompactList}\item 
+\hyperlink{classhockey_1_1Annuaire}{Annuaire} \& \hyperlink{classhockey_1_1Annuaire_a1c30829ff248b46717d93583d94bdfa1}{operator=} (const \hyperlink{classhockey_1_1Annuaire}{Annuaire} \&p\+\_\+annuaire)
+\begin{DoxyCompactList}\small\item\em Surcharge de l\textquotesingle{}opérateur = permettant d\textquotesingle{}attribuer les attributs d\textquotesingle{}un annuaire à un autre. \end{DoxyCompactList}\item 
+void \hyperlink{classhockey_1_1Annuaire_a14257b2cc11fc7bc5fc2c930c4c23785}{ajouter\+Personne} (const \hyperlink{classhockey_1_1Personne}{Personne} \&p\+\_\+personne)
+\begin{DoxyCompactList}\small\item\em fonction permettant d\textquotesingle{}ajouter le pointeur d\textquotesingle{}une personne à l\textquotesingle{}annuaire. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhockey_1_1Annuaire_a2f105cc572701bab0170b3aa3602a004}\label{classhockey_1_1Annuaire_a2f105cc572701bab0170b3aa3602a004}} 
+\hyperlink{classhockey_1_1Annuaire_a2f105cc572701bab0170b3aa3602a004}{$\sim$\+Annuaire} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de la classe annuaire. Lors de la destruction de l\textquotesingle{}objet, les personnes membres sont également détruits. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Cette classe sert à la gestion des personnes membres d\textquotesingle{}une équipe de hockey. 
+
+Les instances de la classe doivent être construites avec un nom d\textquotesingle{}équipe en param\mbox{[}in\mbox{]}. 
+
+Attributs\+: string m\+\_\+nom\+Club ( le nom de l\textquotesingle{}équipe de hockey), vector$<$\+Personne$\ast$$>$ m\+\_\+v\+Membres (vecteur contenant des pointeurs vers les personnes membres de l\textquotesingle{}équipe). 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhockey_1_1Annuaire_ac756b17e484628d1e5386e9252f26d65}\label{classhockey_1_1Annuaire_ac756b17e484628d1e5386e9252f26d65}} 
+\index{hockey\+::\+Annuaire@{hockey\+::\+Annuaire}!Annuaire@{Annuaire}}
+\index{Annuaire@{Annuaire}!hockey\+::\+Annuaire@{hockey\+::\+Annuaire}}
+\subsubsection{\texorpdfstring{Annuaire()}{Annuaire()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily hockey\+::\+Annuaire\+::\+Annuaire (\begin{DoxyParamCaption}\item[{std\+::string}]{p\+\_\+nom\+Club }\end{DoxyParamCaption})}
+
+
+
+constructeur d\textquotesingle{}un objet annuaire avec le paramètre du nom de club. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+nom\+Club} & Un string qui représente le nom de l\textquotesingle{}équipe de hockey que l\textquotesingle{}annuaire gère. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+p\+\_\+nom\+Club ne doit pas être un string vide. 
+\end{DoxyPrecond}
+\begin{DoxyInvariant}{Invariant}
+string m\+\_\+nomclub doit être non vide. 
+\end{DoxyInvariant}
+\mbox{\Hypertarget{classhockey_1_1Annuaire_a9ced0f8c3c376e8e114ef04fd6b21e75}\label{classhockey_1_1Annuaire_a9ced0f8c3c376e8e114ef04fd6b21e75}} 
+\index{hockey\+::\+Annuaire@{hockey\+::\+Annuaire}!Annuaire@{Annuaire}}
+\index{Annuaire@{Annuaire}!hockey\+::\+Annuaire@{hockey\+::\+Annuaire}}
+\subsubsection{\texorpdfstring{Annuaire()}{Annuaire()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily hockey\+::\+Annuaire\+::\+Annuaire (\begin{DoxyParamCaption}\item[{const \hyperlink{classhockey_1_1Annuaire}{Annuaire} \&}]{p\+\_\+annuaire }\end{DoxyParamCaption})}
+
+
+
+Constructeur de la classe annuaire qui accepte en paramètre un annuaire. Ce type de constructeur permet de créer un nouvel annuaire avec les informations de l\textquotesingle{}annuaire passé en paramètre. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+annuaire} & un annuaire valide dont le nom n\textquotesingle{}est pas un string vide \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+p\+\_\+annuaire doit être non vide. 
+\end{DoxyPrecond}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhockey_1_1Annuaire_a14257b2cc11fc7bc5fc2c930c4c23785}\label{classhockey_1_1Annuaire_a14257b2cc11fc7bc5fc2c930c4c23785}} 
+\index{hockey\+::\+Annuaire@{hockey\+::\+Annuaire}!ajouter\+Personne@{ajouter\+Personne}}
+\index{ajouter\+Personne@{ajouter\+Personne}!hockey\+::\+Annuaire@{hockey\+::\+Annuaire}}
+\subsubsection{\texorpdfstring{ajouter\+Personne()}{ajouterPersonne()}}
+{\footnotesize\ttfamily void hockey\+::\+Annuaire\+::ajouter\+Personne (\begin{DoxyParamCaption}\item[{const \hyperlink{classhockey_1_1Personne}{Personne} \&}]{p\+\_\+personne }\end{DoxyParamCaption})}
+
+
+
+fonction permettant d\textquotesingle{}ajouter le pointeur d\textquotesingle{}une personne à l\textquotesingle{}annuaire. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+personne} & une personne que l\textquotesingle{}on veut ajouter à l\textquotesingle{}annuaire. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classhockey_1_1Annuaire_a1c30829ff248b46717d93583d94bdfa1}\label{classhockey_1_1Annuaire_a1c30829ff248b46717d93583d94bdfa1}} 
+\index{hockey\+::\+Annuaire@{hockey\+::\+Annuaire}!operator=@{operator=}}
+\index{operator=@{operator=}!hockey\+::\+Annuaire@{hockey\+::\+Annuaire}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{classhockey_1_1Annuaire}{Annuaire} \& hockey\+::\+Annuaire\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{classhockey_1_1Annuaire}{Annuaire} \&}]{p\+\_\+annuaire }\end{DoxyParamCaption})}
+
+
+
+Surcharge de l\textquotesingle{}opérateur = permettant d\textquotesingle{}attribuer les attributs d\textquotesingle{}un annuaire à un autre. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+annuaire} & un annuaire valide dont le nom n\textquotesingle{}est pas un string vide \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+p\+\_\+annuaire doit être non vide. 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+l\textquotesingle{}annuaire initiale avec ses attributs changés pour ceux de p\+\_\+annuaire. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classhockey_1_1Annuaire_acc3c0ae6f56007b2c54d3ef2765c6297}\label{classhockey_1_1Annuaire_acc3c0ae6f56007b2c54d3ef2765c6297}} 
+\index{hockey\+::\+Annuaire@{hockey\+::\+Annuaire}!req\+Annuaire\+Formate@{req\+Annuaire\+Formate}}
+\index{req\+Annuaire\+Formate@{req\+Annuaire\+Formate}!hockey\+::\+Annuaire@{hockey\+::\+Annuaire}}
+\subsubsection{\texorpdfstring{req\+Annuaire\+Formate()}{reqAnnuaireFormate()}}
+{\footnotesize\ttfamily std\+::string hockey\+::\+Annuaire\+::req\+Annuaire\+Formate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+retourne le nom de l\textquotesingle{}équipe et les informations des membres. 
+
+\begin{DoxyReturn}{Returns}
+une chaîne de caractères (string) qui représente les infos de l\textquotesingle{}équipe. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classhockey_1_1Annuaire_a72d2cf91ab310b2f36011ba4639bdcf3}\label{classhockey_1_1Annuaire_a72d2cf91ab310b2f36011ba4639bdcf3}} 
+\index{hockey\+::\+Annuaire@{hockey\+::\+Annuaire}!req\+Nom\+Club@{req\+Nom\+Club}}
+\index{req\+Nom\+Club@{req\+Nom\+Club}!hockey\+::\+Annuaire@{hockey\+::\+Annuaire}}
+\subsubsection{\texorpdfstring{req\+Nom\+Club()}{reqNomClub()}}
+{\footnotesize\ttfamily const string \& hockey\+::\+Annuaire\+::req\+Nom\+Club (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+retourne le nom de l\textquotesingle{}équipe hockey. 
+
+\begin{DoxyReturn}{Returns}
+une chaîne de caractères (string) qui représente le nom de l\textquotesingle{}équipe. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Annuaire_8h}{Annuaire.\+h}\item 
+\hyperlink{Annuaire_8cpp}{Annuaire.\+cpp}\end{DoxyCompactItemize}

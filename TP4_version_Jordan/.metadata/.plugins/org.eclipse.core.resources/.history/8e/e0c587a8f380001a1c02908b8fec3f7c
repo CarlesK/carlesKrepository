@@ -1,0 +1,188 @@
+/********************************************************************************
+** Form generated from reading UI file 'ajoutjoueurinterface.ui'
+**
+** Created by: Qt User Interface Compiler version 4.8.7
+**
+** WARNING! All changes made in this file will be lost when recompiling UI file!
+********************************************************************************/
+
+#ifndef UI_AJOUTJOUEURINTERFACE_H
+#define UI_AJOUTJOUEURINTERFACE_H
+
+#include <QtCore/QVariant>
+#include <QtGui/QAction>
+#include <QtGui/QApplication>
+#include <QtGui/QButtonGroup>
+#include <QtGui/QComboBox>
+#include <QtGui/QDateEdit>
+#include <QtGui/QDialog>
+#include <QtGui/QFormLayout>
+#include <QtGui/QHBoxLayout>
+#include <QtGui/QHeaderView>
+#include <QtGui/QLabel>
+#include <QtGui/QLineEdit>
+#include <QtGui/QPushButton>
+#include <QtGui/QSpacerItem>
+#include <QtGui/QWidget>
+
+QT_BEGIN_NAMESPACE
+
+class Ui_AjoutJoueurInterfaceClass
+{
+public:
+    QWidget *formLayoutWidget;
+    QFormLayout *formLayout;
+    QLabel *label;
+    QLineEdit *prenomLineEdit;
+    QLabel *label_2;
+    QLineEdit *nomLineEdit;
+    QLabel *label_3;
+    QDateEdit *dateNaissanceDateEdit;
+    QLabel *label_4;
+    QLineEdit *numeroTelephoneLineEdit;
+    QLabel *label_5;
+    QComboBox *positionComboBox;
+    QLabel *label_6;
+    QPushButton *validationPushButton;
+    QWidget *horizontalLayoutWidget;
+    QHBoxLayout *horizontalLayout_7;
+    QSpacerItem *horizontalSpacer;
+    QLabel *label_7;
+    QSpacerItem *horizontalSpacer_2;
+
+    void setupUi(QDialog *AjoutJoueurInterfaceClass)
+    {
+        if (AjoutJoueurInterfaceClass->objectName().isEmpty())
+            AjoutJoueurInterfaceClass->setObjectName(QString::fromUtf8("AjoutJoueurInterfaceClass"));
+        AjoutJoueurInterfaceClass->resize(489, 267);
+        AjoutJoueurInterfaceClass->setSizeGripEnabled(false);
+        formLayoutWidget = new QWidget(AjoutJoueurInterfaceClass);
+        formLayoutWidget->setObjectName(QString::fromUtf8("formLayoutWidget"));
+        formLayoutWidget->setGeometry(QRect(10, 60, 471, 201));
+        formLayout = new QFormLayout(formLayoutWidget);
+        formLayout->setSpacing(6);
+        formLayout->setContentsMargins(11, 11, 11, 11);
+        formLayout->setObjectName(QString::fromUtf8("formLayout"));
+        formLayout->setSizeConstraint(QLayout::SetMinimumSize);
+        formLayout->setFormAlignment(Qt::AlignCenter);
+        formLayout->setContentsMargins(0, 0, 0, 0);
+        label = new QLabel(formLayoutWidget);
+        label->setObjectName(QString::fromUtf8("label"));
+
+        formLayout->setWidget(0, QFormLayout::LabelRole, label);
+
+        prenomLineEdit = new QLineEdit(formLayoutWidget);
+        prenomLineEdit->setObjectName(QString::fromUtf8("prenomLineEdit"));
+
+        formLayout->setWidget(0, QFormLayout::FieldRole, prenomLineEdit);
+
+        label_2 = new QLabel(formLayoutWidget);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+
+        formLayout->setWidget(1, QFormLayout::LabelRole, label_2);
+
+        nomLineEdit = new QLineEdit(formLayoutWidget);
+        nomLineEdit->setObjectName(QString::fromUtf8("nomLineEdit"));
+
+        formLayout->setWidget(1, QFormLayout::FieldRole, nomLineEdit);
+
+        label_3 = new QLabel(formLayoutWidget);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+
+        formLayout->setWidget(2, QFormLayout::LabelRole, label_3);
+
+        dateNaissanceDateEdit = new QDateEdit(formLayoutWidget);
+        dateNaissanceDateEdit->setObjectName(QString::fromUtf8("dateNaissanceDateEdit"));
+
+        formLayout->setWidget(2, QFormLayout::FieldRole, dateNaissanceDateEdit);
+
+        label_4 = new QLabel(formLayoutWidget);
+        label_4->setObjectName(QString::fromUtf8("label_4"));
+
+        formLayout->setWidget(3, QFormLayout::LabelRole, label_4);
+
+        numeroTelephoneLineEdit = new QLineEdit(formLayoutWidget);
+        numeroTelephoneLineEdit->setObjectName(QString::fromUtf8("numeroTelephoneLineEdit"));
+
+        formLayout->setWidget(3, QFormLayout::FieldRole, numeroTelephoneLineEdit);
+
+        label_5 = new QLabel(formLayoutWidget);
+        label_5->setObjectName(QString::fromUtf8("label_5"));
+
+        formLayout->setWidget(4, QFormLayout::LabelRole, label_5);
+
+        positionComboBox = new QComboBox(formLayoutWidget);
+        positionComboBox->setObjectName(QString::fromUtf8("positionComboBox"));
+
+        formLayout->setWidget(4, QFormLayout::FieldRole, positionComboBox);
+
+        label_6 = new QLabel(formLayoutWidget);
+        label_6->setObjectName(QString::fromUtf8("label_6"));
+
+        formLayout->setWidget(5, QFormLayout::LabelRole, label_6);
+
+        validationPushButton = new QPushButton(formLayoutWidget);
+        validationPushButton->setObjectName(QString::fromUtf8("validationPushButton"));
+
+        formLayout->setWidget(5, QFormLayout::FieldRole, validationPushButton);
+
+        horizontalLayoutWidget = new QWidget(AjoutJoueurInterfaceClass);
+        horizontalLayoutWidget->setObjectName(QString::fromUtf8("horizontalLayoutWidget"));
+        horizontalLayoutWidget->setGeometry(QRect(0, 0, 491, 61));
+        horizontalLayout_7 = new QHBoxLayout(horizontalLayoutWidget);
+        horizontalLayout_7->setSpacing(6);
+        horizontalLayout_7->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout_7->setObjectName(QString::fromUtf8("horizontalLayout_7"));
+        horizontalLayout_7->setContentsMargins(0, 0, 0, 0);
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_7->addItem(horizontalSpacer);
+
+        label_7 = new QLabel(horizontalLayoutWidget);
+        label_7->setObjectName(QString::fromUtf8("label_7"));
+        QFont font;
+        font.setPointSize(14);
+        font.setBold(true);
+        font.setWeight(75);
+        label_7->setFont(font);
+        label_7->setTextFormat(Qt::RichText);
+        label_7->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout_7->addWidget(label_7);
+
+        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_7->addItem(horizontalSpacer_2);
+
+        formLayoutWidget->raise();
+        horizontalLayoutWidget->raise();
+        label_7->raise();
+
+        retranslateUi(AjoutJoueurInterfaceClass);
+        QObject::connect(validationPushButton, SIGNAL(clicked()), AjoutJoueurInterfaceClass, SLOT(valideEnregistrement()));
+
+        QMetaObject::connectSlotsByName(AjoutJoueurInterfaceClass);
+    } // setupUi
+
+    void retranslateUi(QDialog *AjoutJoueurInterfaceClass)
+    {
+        AjoutJoueurInterfaceClass->setWindowTitle(QApplication::translate("AjoutJoueurInterfaceClass", "AjoutJoueurInterface", 0, QApplication::UnicodeUTF8));
+        label->setText(QApplication::translate("AjoutJoueurInterfaceClass", "Pr\303\251nom", 0, QApplication::UnicodeUTF8));
+        label_2->setText(QApplication::translate("AjoutJoueurInterfaceClass", "Nom", 0, QApplication::UnicodeUTF8));
+        label_3->setText(QApplication::translate("AjoutJoueurInterfaceClass", "Date de Naissance", 0, QApplication::UnicodeUTF8));
+        label_4->setText(QApplication::translate("AjoutJoueurInterfaceClass", "Num\303\251ro de t\303\251l\303\251phone", 0, QApplication::UnicodeUTF8));
+        label_5->setText(QApplication::translate("AjoutJoueurInterfaceClass", "Position", 0, QApplication::UnicodeUTF8));
+        label_6->setText(QApplication::translate("AjoutJoueurInterfaceClass", "Validation", 0, QApplication::UnicodeUTF8));
+        validationPushButton->setText(QApplication::translate("AjoutJoueurInterfaceClass", "PushButton", 0, QApplication::UnicodeUTF8));
+        label_7->setText(QApplication::translate("AjoutJoueurInterfaceClass", "Ajout  d'un joueur", 0, QApplication::UnicodeUTF8));
+    } // retranslateUi
+
+};
+
+namespace Ui {
+    class AjoutJoueurInterfaceClass: public Ui_AjoutJoueurInterfaceClass {};
+} // namespace Ui
+
+QT_END_NAMESPACE
+
+#endif // UI_AJOUTJOUEURINTERFACE_H

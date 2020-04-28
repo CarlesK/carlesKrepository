@@ -1,0 +1,68 @@
+#include "ajoutentraineurinterface.h"
+
+AjoutEntraineurInterface::AjoutEntraineurInterface(QWidget *parent)
+    : QWidget(parent)
+{
+	ui.setupUi(this);
+	ui.sexeComboBox->addItem("Masculin");
+	ui.sexeComboBox->addItem("Féminin");
+}
+
+AjoutEntraineurInterface::~AjoutEntraineurInterface()
+{
+
+}
+
+QString AjoutEntraineurInterface::reqNom() const
+{
+	return ui.nomLineEdit->text();
+}
+
+QString AjoutEntraineurInterface::reqPrenom() const
+{
+	return ui.prenomLineEdit->text();
+}
+
+util::Date AjoutEntraineurInterface::reqDateNaissance() const
+{
+	return m_dateNaissance;
+}
+
+QString AjoutEntraineurInterface::reqNumTelephone() const
+{
+	return ui.numeroTelephoneLineEdit->text();
+}
+
+QString AjoutEntraineurInterface::reqNumRAMQ() const
+{
+	return ui.numRAMQLineEdit->text();
+}
+QString AjoutEntraineurInterface::reqSexe() const
+{
+	return ui.sexeComboBox->currentText();
+}
+void AjoutJoueurInterface::valideEnregistrement()
+{
+	if(ui.nomLineEdit->text().isEmpty())
+	{
+		QString message("Le nom ne doit pas être vide.");
+		QMessageBox::information(this, "ERREUR", message);
+		return;
+	}
+	if(ui.prenomLineEdit->text().isEmpty())
+		{
+			QString message("Le prénom ne doit pas être vide.");
+			QMessageBox::information(this, "ERREUR", message);
+			return;
+		}
+	if(ui.numeroTelephoneLineEdit->text().isEmpty())
+		{
+			QString message("Le numéro de téléphone ne doit pas être vide.");
+			QMessageBox::information(this, "ERREUR", message);
+			return;
+		}
+	m_dateNaissance.asgDate(ui.dateNaissanceDateEdit->date().day(),
+			                ui.dateNaissanceDateEdit->date().month(),
+							ui.dateNaissanceDateEdit->date().year());
+	accept();
+}

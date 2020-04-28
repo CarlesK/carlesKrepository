@@ -1,0 +1,210 @@
+\hypertarget{classhockey_1_1Personne}{}\section{hockey\+:\+:Personne Class Reference}
+\label{classhockey_1_1Personne}\index{hockey\+::\+Personne@{hockey\+::\+Personne}}
+
+
+Cette classe sert au maintien et à la manipulation des personnes.  
+
+
+
+
+{\ttfamily \#include $<$Personne.\+h$>$}
+
+
+
+Inheritance diagram for hockey\+:\+:Personne\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{classhockey_1_1Personne__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for hockey\+:\+:Personne\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{classhockey_1_1Personne__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhockey_1_1Personne_ad712e93d7629f8cab38821139d9dc2af}\label{classhockey_1_1Personne_ad712e93d7629f8cab38821139d9dc2af}} 
+\hyperlink{classhockey_1_1Personne_ad712e93d7629f8cab38821139d9dc2af}{Personne} ()
+\begin{DoxyCompactList}\small\item\em constructeur d\textquotesingle{}un objet \hyperlink{classhockey_1_1Personne}{Personne} vide. Ce constructeur existe pour renvoyer une erreur si un objet \hyperlink{classhockey_1_1Personne}{Personne} est créé sans paramètres \end{DoxyCompactList}\item 
+\hyperlink{classhockey_1_1Personne_ab38273cfbd7a665a10b20b5d44255482}{Personne} (std\+::string p\+\_\+nom, std\+::string p\+\_\+prenom, const \hyperlink{classutil_1_1Date}{util\+::\+Date} \&p\+\_\+date\+Naissance, std\+::string p\+\_\+telephone)
+\begin{DoxyCompactList}\small\item\em constructeur d\textquotesingle{}un objet \hyperlink{classhockey_1_1Personne}{Personne} à partir de valeurs passées en paramètres. \end{DoxyCompactList}\item 
+const \hyperlink{classutil_1_1Date}{util\+::\+Date} \hyperlink{classhockey_1_1Personne_ae9cb2402f8012b71959846a079986308}{req\+Date\+Naissance} () const
+\begin{DoxyCompactList}\small\item\em retourne la date de naissance de la personne . \end{DoxyCompactList}\item 
+const std\+::string \& \hyperlink{classhockey_1_1Personne_a0fdf8d98c481d17234c995bf67b57091}{req\+Nom} () const
+\begin{DoxyCompactList}\small\item\em retourne le nom de le personne. \end{DoxyCompactList}\item 
+const std\+::string \& \hyperlink{classhockey_1_1Personne_ae4257bc9fcd9f97d2a982797642401ee}{req\+Prenom} () const
+\begin{DoxyCompactList}\small\item\em retourne le prénom de le personne. \end{DoxyCompactList}\item 
+const std\+::string \& \hyperlink{classhockey_1_1Personne_ad6b6a4dc6bb847c2bec38acb9104e378}{req\+Telephone} () const
+\begin{DoxyCompactList}\small\item\em retourne le téléphone de le personne. \end{DoxyCompactList}\item 
+void \hyperlink{classhockey_1_1Personne_a82838fb8c45d908b64396e14787f4d52}{asg\+Telephone} (const std\+::string \&p\+\_\+telephone)
+\begin{DoxyCompactList}\small\item\em asigne un nouveau numéro de téléphone à la personne. \end{DoxyCompactList}\item 
+virtual std\+::string \hyperlink{classhockey_1_1Personne_ae67b3d253c1fa8a090dd8040ca1e8ccc}{req\+Personne\+Formate} () const
+\begin{DoxyCompactList}\small\item\em créer une chaîne de caractères (string) représentant les informations de la personne. \end{DoxyCompactList}\item 
+bool \hyperlink{classhockey_1_1Personne_a5a519977d574d18b919eb39e6cfbf62b}{operator==} (const \hyperlink{classhockey_1_1Personne}{Personne} \&p\+\_\+personne) const
+\begin{DoxyCompactList}\small\item\em surcharge de l\textquotesingle{}opérateur == pour les objets \hyperlink{classhockey_1_1Personne}{Personne}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhockey_1_1Personne_a4e81e9f921891b0bd1b3bbe859d3fae0}\label{classhockey_1_1Personne_a4e81e9f921891b0bd1b3bbe859d3fae0}} 
+virtual \hyperlink{classhockey_1_1Personne}{Personne} $\ast$ {\bfseries clone} () const =0
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhockey_1_1Personne_a77d1c72b30b7cfad33714688d665ff05}\label{classhockey_1_1Personne_a77d1c72b30b7cfad33714688d665ff05}} 
+\hyperlink{classutil_1_1Date}{util\+::\+Date} {\bfseries m\+\_\+date\+Naissance}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Cette classe sert au maintien et à la manipulation des personnes. 
+
+Cette classe est abstraite. 
+
+Les valeurs qui entrent dans la classe doivent être validée à priori. 
+
+Attributs\+: string p\+\_\+nom, string p\+\_\+prenom, Date p\+\_\+date\+Naissance, string p\+\_\+telephone 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhockey_1_1Personne_ab38273cfbd7a665a10b20b5d44255482}\label{classhockey_1_1Personne_ab38273cfbd7a665a10b20b5d44255482}} 
+\index{hockey\+::\+Personne@{hockey\+::\+Personne}!Personne@{Personne}}
+\index{Personne@{Personne}!hockey\+::\+Personne@{hockey\+::\+Personne}}
+\subsubsection{\texorpdfstring{Personne()}{Personne()}}
+{\footnotesize\ttfamily hockey\+::\+Personne\+::\+Personne (\begin{DoxyParamCaption}\item[{std\+::string}]{p\+\_\+nom,  }\item[{std\+::string}]{p\+\_\+prenom,  }\item[{const \hyperlink{classutil_1_1Date}{util\+::\+Date} \&}]{p\+\_\+date\+Naissance,  }\item[{std\+::string}]{p\+\_\+telephone }\end{DoxyParamCaption})}
+
+
+
+constructeur d\textquotesingle{}un objet \hyperlink{classhockey_1_1Personne}{Personne} à partir de valeurs passées en paramètres. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+nom} & est une chaîne de caractères (string) qui représente le nom de la personne créée. \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+prenom} & est une chaîne de caractères (string) qui représente le prénom de la personne créée. \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+date\+Naissance} & est un objet Date qui représente la date de naissance de la personne créée. \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+telephone} & est une chaîne de caractères (string) qui représente le prénom de la personne créée. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+Les valeurs entrées doivent être valides et avoir un format valide. 
+\end{DoxyPrecond}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhockey_1_1Personne_a82838fb8c45d908b64396e14787f4d52}\label{classhockey_1_1Personne_a82838fb8c45d908b64396e14787f4d52}} 
+\index{hockey\+::\+Personne@{hockey\+::\+Personne}!asg\+Telephone@{asg\+Telephone}}
+\index{asg\+Telephone@{asg\+Telephone}!hockey\+::\+Personne@{hockey\+::\+Personne}}
+\subsubsection{\texorpdfstring{asg\+Telephone()}{asgTelephone()}}
+{\footnotesize\ttfamily void hockey\+::\+Personne\+::asg\+Telephone (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+\_\+telephone }\end{DoxyParamCaption})}
+
+
+
+asigne un nouveau numéro de téléphone à la personne. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+telephone} & une chaîne de caractère (string) qui représente le numéro de téléphone de la personne. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+le numéro de téléphone doit être valide et dans un format valide X\+XX X\+X\+X-\/\+X\+X\+XX. 
+\end{DoxyPrecond}
+\mbox{\Hypertarget{classhockey_1_1Personne_a5a519977d574d18b919eb39e6cfbf62b}\label{classhockey_1_1Personne_a5a519977d574d18b919eb39e6cfbf62b}} 
+\index{hockey\+::\+Personne@{hockey\+::\+Personne}!operator==@{operator==}}
+\index{operator==@{operator==}!hockey\+::\+Personne@{hockey\+::\+Personne}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool hockey\+::\+Personne\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{classhockey_1_1Personne}{Personne} \&}]{p\+\_\+personne }\end{DoxyParamCaption}) const}
+
+
+
+surcharge de l\textquotesingle{}opérateur == pour les objets \hyperlink{classhockey_1_1Personne}{Personne}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+personne} & qui est une personne valide. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un booléen indiquant si les deux personnes sont égales ou pas sur la base de leur nom, prénom et date de naissance. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classhockey_1_1Personne_ae9cb2402f8012b71959846a079986308}\label{classhockey_1_1Personne_ae9cb2402f8012b71959846a079986308}} 
+\index{hockey\+::\+Personne@{hockey\+::\+Personne}!req\+Date\+Naissance@{req\+Date\+Naissance}}
+\index{req\+Date\+Naissance@{req\+Date\+Naissance}!hockey\+::\+Personne@{hockey\+::\+Personne}}
+\subsubsection{\texorpdfstring{req\+Date\+Naissance()}{reqDateNaissance()}}
+{\footnotesize\ttfamily const \hyperlink{classutil_1_1Date}{util\+::\+Date} hockey\+::\+Personne\+::req\+Date\+Naissance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+retourne la date de naissance de la personne . 
+
+\begin{DoxyReturn}{Returns}
+un objet date qui représente la date de naissance de la personne. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classhockey_1_1Personne_a0fdf8d98c481d17234c995bf67b57091}\label{classhockey_1_1Personne_a0fdf8d98c481d17234c995bf67b57091}} 
+\index{hockey\+::\+Personne@{hockey\+::\+Personne}!req\+Nom@{req\+Nom}}
+\index{req\+Nom@{req\+Nom}!hockey\+::\+Personne@{hockey\+::\+Personne}}
+\subsubsection{\texorpdfstring{req\+Nom()}{reqNom()}}
+{\footnotesize\ttfamily const string \& hockey\+::\+Personne\+::req\+Nom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+retourne le nom de le personne. 
+
+\begin{DoxyReturn}{Returns}
+une chaîne de caractères (string) qui représente le nom de la personne. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classhockey_1_1Personne_ae67b3d253c1fa8a090dd8040ca1e8ccc}\label{classhockey_1_1Personne_ae67b3d253c1fa8a090dd8040ca1e8ccc}} 
+\index{hockey\+::\+Personne@{hockey\+::\+Personne}!req\+Personne\+Formate@{req\+Personne\+Formate}}
+\index{req\+Personne\+Formate@{req\+Personne\+Formate}!hockey\+::\+Personne@{hockey\+::\+Personne}}
+\subsubsection{\texorpdfstring{req\+Personne\+Formate()}{reqPersonneFormate()}}
+{\footnotesize\ttfamily string hockey\+::\+Personne\+::req\+Personne\+Formate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+créer une chaîne de caractères (string) représentant les informations de la personne. 
+
+\begin{DoxyReturn}{Returns}
+une chaîne de caractères (string) représentant les informations de la personne. 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{classhockey_1_1Entraineur_a376149c10b8541c45d703682d41d80f3}{hockey\+::\+Entraineur}, and \hyperlink{classhockey_1_1Joueur_ab3d6b15e55aa765807e4960108f7db29}{hockey\+::\+Joueur}.
+
+\mbox{\Hypertarget{classhockey_1_1Personne_ae4257bc9fcd9f97d2a982797642401ee}\label{classhockey_1_1Personne_ae4257bc9fcd9f97d2a982797642401ee}} 
+\index{hockey\+::\+Personne@{hockey\+::\+Personne}!req\+Prenom@{req\+Prenom}}
+\index{req\+Prenom@{req\+Prenom}!hockey\+::\+Personne@{hockey\+::\+Personne}}
+\subsubsection{\texorpdfstring{req\+Prenom()}{reqPrenom()}}
+{\footnotesize\ttfamily const string \& hockey\+::\+Personne\+::req\+Prenom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+retourne le prénom de le personne. 
+
+\begin{DoxyReturn}{Returns}
+une chaîne de caractères (string) qui représente le prénom de la personne. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classhockey_1_1Personne_ad6b6a4dc6bb847c2bec38acb9104e378}\label{classhockey_1_1Personne_ad6b6a4dc6bb847c2bec38acb9104e378}} 
+\index{hockey\+::\+Personne@{hockey\+::\+Personne}!req\+Telephone@{req\+Telephone}}
+\index{req\+Telephone@{req\+Telephone}!hockey\+::\+Personne@{hockey\+::\+Personne}}
+\subsubsection{\texorpdfstring{req\+Telephone()}{reqTelephone()}}
+{\footnotesize\ttfamily const string \& hockey\+::\+Personne\+::req\+Telephone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+retourne le téléphone de le personne. 
+
+\begin{DoxyReturn}{Returns}
+une chaîne de caractères (string) qui représente le numéro de téléphone de la personne. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Personne_8h}{Personne.\+h}\item 
+\hyperlink{Personne_8cpp}{Personne.\+cpp}\end{DoxyCompactItemize}

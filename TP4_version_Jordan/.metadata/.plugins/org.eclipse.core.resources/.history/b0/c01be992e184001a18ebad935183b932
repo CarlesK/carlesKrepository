@@ -1,0 +1,18 @@
+#include "ajoutannuaireinterface.h"
+
+AjoutAnnuaireInterface::AjoutAnnuaireInterface(QWidget *parent)
+    : QDialog(parent)
+{
+	ui.setupUi(this);
+}
+
+QString reqNomEquipe() const
+{
+	return ui.
+}
+
+
+AjoutAnnuaireInterface::~AjoutAnnuaireInterface()
+{
+
+}

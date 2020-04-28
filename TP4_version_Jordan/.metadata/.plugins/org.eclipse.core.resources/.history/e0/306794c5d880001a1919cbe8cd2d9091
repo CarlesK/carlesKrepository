@@ -1,0 +1,12 @@
+#include "ajoutjoueurinterface.h"
+
+AjoutJoueurInterface::AjoutJoueurInterface(QWidget *parent)
+    : QDialog(parent)
+{
+	ui.setupUi(this);
+}
+
+AjoutJoueurInterface::~AjoutJoueurInterface()
+{
+
+}

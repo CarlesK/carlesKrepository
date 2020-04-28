@@ -1,0 +1,8 @@
+<map id="Personne.h" name="Personne.h">
+<area shape="rect" id="node2" href="$Annuaire_8h.html" title=": Fichier qui contient l&#39;interface de la classe annuaire qui permet de faire la gestion des personnes..." alt="" coords="13,80,97,107"/>
+<area shape="rect" id="node4" href="$Entraineur_8h.html" title="Fichier contenant l&#39;implémentation de la classe Entraineur. Cette classe est dérivée de la classe Per..." alt="" coords="121,80,213,107"/>
+<area shape="rect" id="node5" href="$Joueur_8h.html" title="Joueur.h" alt="" coords="237,80,309,107"/>
+<area shape="rect" id="node7" href="$Personne_8cpp.html" title="Cette classe sert au maintien et à la manipulation des personnes. Cette classe est abstraite..." alt="" coords="334,80,437,107"/>
+<area shape="rect" id="node3" href="$Annuaire_8cpp.html" title="Fichier qui contient l&#39;implémentation de la classe Annuaire. Cette classe permet de gérer les différe..." alt="" coords="5,155,104,181"/>
+<area shape="rect" id="node6" href="$Joueur_8cpp.html" title="Joueur.cpp" alt="" coords="230,155,317,181"/>
+</map>

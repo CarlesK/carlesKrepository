@@ -1,0 +1,25 @@
+#ifndef AJOUTENTRAINEURINTERFACE_H
+#define AJOUTENTRAINEURINTERFACE_H
+
+#include <QtGui/QWidget>
+#include "ui_ajoutentraineurinterface.h"
+#include "Date.h"
+
+class AjoutEntraineurInterface : public QWidget
+{
+    Q_OBJECT
+
+public:
+    AjoutEntraineurInterface(QWidget *parent = 0);
+    ~AjoutEntraineurInterface();
+    QString reqNom() const;
+    QString reqPrenom() const;
+    util::Date reqDateNaissance() const;
+    QString reqNumTelephone() const;
+    QString reqNumRAMQ() const;
+
+private:
+    Ui::AjoutEntraineurInterfaceClass ui;
+};
+
+#endif // AJOUTENTRAINEURINTERFACE_H

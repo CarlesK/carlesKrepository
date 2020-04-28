@@ -1,0 +1,43 @@
+#include "ajoutannuaireinterface.h"
+
+AjoutAnnuaireInterface::AjoutAnnuaireInterface(QWidget *parent)
+    : QDialog(parent)
+{
+	ui.setupUi(this);
+}
+
+QString AjoutAnnuaireInterface::reqNomEquipe() const
+{
+	return ui.lineEditNomEquipe->text();
+}
+
+void AjoutAnnuaireInterface::valideEnregistrement()
+{
+	if(ui.nomLineEdit->text().isEmpty())
+	{
+		QString message("Le nom ne doit pas être vide.");
+		QMessageBox::information(this, "ERREUR", message);
+		return;
+	}
+	if(ui.prenomLineEdit->text().isEmpty())
+		{
+			QString message("Le prénom ne doit pas être vide.");
+			QMessageBox::information(this, "ERREUR", message);
+			return;
+		}
+	if(ui.numeroTelephoneLineEdit->text().isEmpty())
+		{
+			QString message("Le numéro de téléphone ne doit pas être vide.");
+			QMessageBox::information(this, "ERREUR", message);
+			return;
+		}
+	m_dateNaissance.asgDate(ui.dateNaissanceDateEdit->date().day(),
+			                ui.dateNaissanceDateEdit->date().month(),
+							ui.dateNaissanceDateEdit->date().year());
+	accept();
+}
+
+AjoutAnnuaireInterface::~AjoutAnnuaireInterface()
+{
+
+}

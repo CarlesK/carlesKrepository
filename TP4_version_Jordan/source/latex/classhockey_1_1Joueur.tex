@@ -1,0 +1,146 @@
+\hypertarget{classhockey_1_1Joueur}{}\section{hockey\+:\+:Joueur Class Reference}
+\label{classhockey_1_1Joueur}\index{hockey\+::\+Joueur@{hockey\+::\+Joueur}}
+
+
+Cette classe sert au maintien et à la manipulation des joueurs. Elle hérite de la classe \hyperlink{classhockey_1_1Personne}{Personne}.  
+
+
+
+
+{\ttfamily \#include $<$Joueur.\+h$>$}
+
+
+
+Inheritance diagram for hockey\+:\+:Joueur\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{classhockey_1_1Joueur__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for hockey\+:\+:Joueur\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{classhockey_1_1Joueur__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classhockey_1_1Joueur_a07cc484db0a5b94fb425aff475c123e2}{Joueur} (std\+::string p\+\_\+nom, std\+::string p\+\_\+prenom, const \hyperlink{classutil_1_1Date}{util\+::\+Date} \&p\+\_\+date\+Naissance, std\+::string p\+\_\+telephone, std\+::string p\+\_\+position)
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \hyperlink{classhockey_1_1Joueur}{Joueur} avec des paramètres en entrée. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhockey_1_1Joueur_a822dae0ca7b05d7637eab533656dfe22}\label{classhockey_1_1Joueur_a822dae0ca7b05d7637eab533656dfe22}} 
+\hyperlink{classhockey_1_1Joueur_a822dae0ca7b05d7637eab533656dfe22}{Joueur} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut sans paramètres. Permet de retourner une erreur de précondition s\textquotesingle{}il est utilisé. \end{DoxyCompactList}\item 
+const std\+::string \& \hyperlink{classhockey_1_1Joueur_a7c9bc7262096861271b4e0431dcd1693}{req\+Position} () const
+\begin{DoxyCompactList}\small\item\em Méthode permettant de retourner la position du joueur. \end{DoxyCompactList}\item 
+virtual std\+::string \hyperlink{classhockey_1_1Joueur_ab3d6b15e55aa765807e4960108f7db29}{req\+Personne\+Formate} () const
+\begin{DoxyCompactList}\small\item\em Méthode permettant de retourner les informations du joueur. \end{DoxyCompactList}\item 
+virtual \hyperlink{classhockey_1_1Personne}{Personne} $\ast$ \hyperlink{classhockey_1_1Joueur_a29a2fc040b74bf3bf72d7670012c9bff}{clone} () const
+\begin{DoxyCompactList}\small\item\em Méthode permettant de créer une nouvelle instance du joueur. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhockey_1_1Joueur_a3f385cd26133b8fe8c2afce4c70c9ece}\label{classhockey_1_1Joueur_a3f385cd26133b8fe8c2afce4c70c9ece}} 
+virtual \hyperlink{classhockey_1_1Joueur_a3f385cd26133b8fe8c2afce4c70c9ece}{$\sim$\+Joueur} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de la classe \hyperlink{classhockey_1_1Joueur}{Joueur}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Cette classe sert au maintien et à la manipulation des joueurs. Elle hérite de la classe \hyperlink{classhockey_1_1Personne}{Personne}. 
+
+Les valeurs qui entrent dans la classe doivent être validée à priori. 
+
+Attributs\+: string p\+\_\+nom, string p\+\_\+prenom, Date p\+\_\+date\+Naissance, string p\+\_\+telephone, string p\+\_\+position 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhockey_1_1Joueur_a07cc484db0a5b94fb425aff475c123e2}\label{classhockey_1_1Joueur_a07cc484db0a5b94fb425aff475c123e2}} 
+\index{hockey\+::\+Joueur@{hockey\+::\+Joueur}!Joueur@{Joueur}}
+\index{Joueur@{Joueur}!hockey\+::\+Joueur@{hockey\+::\+Joueur}}
+\subsubsection{\texorpdfstring{Joueur()}{Joueur()}}
+{\footnotesize\ttfamily hockey\+::\+Joueur\+::\+Joueur (\begin{DoxyParamCaption}\item[{std\+::string}]{p\+\_\+nom,  }\item[{std\+::string}]{p\+\_\+prenom,  }\item[{const \hyperlink{classutil_1_1Date}{util\+::\+Date} \&}]{p\+\_\+date\+Naissance,  }\item[{std\+::string}]{p\+\_\+telephone,  }\item[{std\+::string}]{p\+\_\+position }\end{DoxyParamCaption})}
+
+
+
+Constructeur de la classe \hyperlink{classhockey_1_1Joueur}{Joueur} avec des paramètres en entrée. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+nom} & un string représentant le nom du joueur \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+prenom} & un string représentant le prénom du joueur \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+date\+Naissance} & un objet Date représentant la date de naissance du joueur \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+telephone} & un string représentant le numéro de téléphone du joueur \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+position} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+Tous les paramètres en entrée doivent être valide pour une personne standard. 
+
+La position du joueur doit être \char`\"{}centre\char`\"{},\char`\"{}ailier\char`\"{},\char`\"{}gardien\char`\"{} ou \char`\"{}défenseur\char`\"{} 
+\end{DoxyPrecond}
+\begin{DoxyInvariant}{Invariant}
+Les invariants d\textquotesingle{}un joueur sont les mêmes que ceux d\textquotesingle{}une personne standard. 
+
+Le joueur doit avoir une position valide. 
+\end{DoxyInvariant}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhockey_1_1Joueur_a29a2fc040b74bf3bf72d7670012c9bff}\label{classhockey_1_1Joueur_a29a2fc040b74bf3bf72d7670012c9bff}} 
+\index{hockey\+::\+Joueur@{hockey\+::\+Joueur}!clone@{clone}}
+\index{clone@{clone}!hockey\+::\+Joueur@{hockey\+::\+Joueur}}
+\subsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \hyperlink{classhockey_1_1Personne}{Personne} $\ast$ hockey\+::\+Joueur\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Méthode permettant de créer une nouvelle instance du joueur. 
+
+\begin{DoxyReturn}{Returns}
+un pointeur vers la nouvelle instance du joueur. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classhockey_1_1Personne}{hockey\+::\+Personne}.
+
+\mbox{\Hypertarget{classhockey_1_1Joueur_ab3d6b15e55aa765807e4960108f7db29}\label{classhockey_1_1Joueur_ab3d6b15e55aa765807e4960108f7db29}} 
+\index{hockey\+::\+Joueur@{hockey\+::\+Joueur}!req\+Personne\+Formate@{req\+Personne\+Formate}}
+\index{req\+Personne\+Formate@{req\+Personne\+Formate}!hockey\+::\+Joueur@{hockey\+::\+Joueur}}
+\subsubsection{\texorpdfstring{req\+Personne\+Formate()}{reqPersonneFormate()}}
+{\footnotesize\ttfamily string hockey\+::\+Joueur\+::req\+Personne\+Formate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Méthode permettant de retourner les informations du joueur. 
+
+\begin{DoxyReturn}{Returns}
+un string représentant les informations du joueur 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classhockey_1_1Personne_ae67b3d253c1fa8a090dd8040ca1e8ccc}{hockey\+::\+Personne}.
+
+\mbox{\Hypertarget{classhockey_1_1Joueur_a7c9bc7262096861271b4e0431dcd1693}\label{classhockey_1_1Joueur_a7c9bc7262096861271b4e0431dcd1693}} 
+\index{hockey\+::\+Joueur@{hockey\+::\+Joueur}!req\+Position@{req\+Position}}
+\index{req\+Position@{req\+Position}!hockey\+::\+Joueur@{hockey\+::\+Joueur}}
+\subsubsection{\texorpdfstring{req\+Position()}{reqPosition()}}
+{\footnotesize\ttfamily const string \& hockey\+::\+Joueur\+::req\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Méthode permettant de retourner la position du joueur. 
+
+\begin{DoxyReturn}{Returns}
+un string représentant la position du joueur 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Joueur_8h}{Joueur.\+h}\item 
+\hyperlink{Joueur_8cpp}{Joueur.\+cpp}\end{DoxyCompactItemize}

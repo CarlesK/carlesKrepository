@@ -1,0 +1,34 @@
+#include "ajoutjoueurinterface.h"
+
+AjoutJoueurInterface::AjoutJoueurInterface(QWidget *parent)
+    : QDialog(parent)
+{
+	ui.setupUi(this);
+}
+
+AjoutJoueurInterface::~AjoutJoueurInterface()
+{
+
+}
+
+QString AjoutJoueurInterface::reqNom() const
+{
+	return ui.nomLineEdit->text();
+}
+
+QString AjoutJoueurInterface::reqPrenom() const
+{
+	return ui.prenomLineEdit->text();
+}
+
+util::Date AjoutJoueurInterface::reqDateNaissance() const
+{
+	return m_dateNaissance;
+}
+
+void AjoutJoueurInterface::valideEnregistrement()
+{
+	m_dateNaissance.asgDate(ui.dateNaissanceDateEdit->date().day(),
+			                ui.dateNaissanceDateEdit->date().month(),
+							ui.dateNaissanceDateEdit->date().year());
+}

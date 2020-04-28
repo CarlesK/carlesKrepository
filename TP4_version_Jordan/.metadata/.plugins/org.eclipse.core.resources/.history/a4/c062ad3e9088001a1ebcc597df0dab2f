@@ -1,0 +1,50 @@
+#include "annuairegui.h"
+#include "Joueur.h"
+#include "ajoutjoueurinterface.h"
+#include "ajoutannuaireinterface.h"
+#include <iostream>
+
+AnnuaireGUI::AnnuaireGUI(QWidget *parent)
+    : QMainWindow(parent)
+{
+	ui.setupUi(this);
+	QObject::connect(ui.actionEntrerNomEquipe, SIGNAL(triggered()), this, SLOT(dialogAjoutAnnuaire()));
+	if (m_annuaireCree ==true)
+	{
+		QObject::connect(ui.actionJoueur, SIGNAL(triggered()), this, SLOT(dialogAjoutJoueur()));
+	}
+
+}
+
+AnnuaireGUI::~AnnuaireGUI()
+{
+
+}
+
+void AnnuaireGUI::dialogAjoutJoueur()
+{
+	AjoutJoueurInterface saisieJoueur(this);
+	if(saisieJoueur.exec())
+		{
+		ajoutJoueur(saisieJoueur.reqNom().toStdString(),saisieJoueur.reqPrenom().toStdString(),
+				    saisieJoueur.reqDateNaissance(), saisieJoueur.reqNumTelephone().toStdString(),
+					saisieJoueur.reqPosition().toStdString());
+		std::cout<<m_annuaire.reqAnnuaireFormate()<<std::endl;
+		}
+}
+void AnnuaireGUI::dialogAjoutAnnuaire()
+{
+	AjoutAnnuaireInterface saisieAnnuaire(this);
+	if(saisieAnnuaire.exec())
+	{
+		;
+	}
+}
+
+
+void AnnuaireGUI::ajoutJoueur(std::string p_nom, std::string p_prenom, const util::Date& p_dateNaissance,
+    		std::string p_telephone, std::string p_position)
+{
+	hockey::Joueur joueur(p_nom, p_prenom, p_dateNaissance, p_telephone, p_position);
+	m_annuaire.ajouterPersonne(joueur);
+}

@@ -1,0 +1,494 @@
+\hypertarget{validationFormat_8cpp}{}\section{validation\+Format.\+cpp File Reference}
+\label{validationFormat_8cpp}\index{validation\+Format.\+cpp@{validation\+Format.\+cpp}}
+
+
+Ce fichier comporte les fonctions permettant de valider le numéro de téléphone standard canadien au niveau national ainsi que le numéro de la R\+A\+MQ.  
+
+
+{\ttfamily \#include \char`\"{}validation\+Format.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+Include dependency graph for validation\+Format.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{validationFormat_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{validationFormat_8cpp_ad19b58e0318b66129069390b2da7496e}{util\+::valider\+Telephone} (const std\+::string \&p\+\_\+telephone)
+\begin{DoxyCompactList}\small\item\em Valide le format d\textquotesingle{}un numéro de téléphone pour qu\textquotesingle{}il respecte le format national canadien standard. \end{DoxyCompactList}\item 
+bool \hyperlink{validationFormat_8cpp_a5743386c1cc811ee37f66a9c58162ff5}{util\+::verification\+Longueur\+Tel} (const std\+::string \&p\+\_\+telephone)
+\begin{DoxyCompactList}\small\item\em Vérifie que le string du numéro de téléphone est de la bonne longueur. \end{DoxyCompactList}\item 
+bool \hyperlink{validationFormat_8cpp_a91d98db549a5328db80783a9cb5a3811}{util\+::verification\+Espace\+Trait} (const std\+::string \&p\+\_\+telephone)
+\begin{DoxyCompactList}\small\item\em Vérifie que le numéro contient un espace et un trait et qu\textquotesingle{}ils sont aux bons endroits. \end{DoxyCompactList}\item 
+bool \hyperlink{validationFormat_8cpp_a00b57c98b926a63daa8215e1436b63dc}{util\+::verification\+Chiffres} (const std\+::string \&p\+\_\+telephone)
+\begin{DoxyCompactList}\small\item\em Vérifie que le numéro ne contient que des chiffres (à l\textquotesingle{}exception de l\textquotesingle{}espace et du trait) \end{DoxyCompactList}\item 
+bool \hyperlink{validationFormat_8cpp_a06d6b26422f8b93767e39482e237c75c}{util\+::verification\+Indicatif} (const std\+::string \&p\+\_\+telephone)
+\begin{DoxyCompactList}\small\item\em Vérifie que l\textquotesingle{}indicatif du numéro est un indicatif valide. Pour ce faire le programme vérifie dans un tableau d\textquotesingle{}indicatifs acceptés I\+N\+D\+I\+C\+A\+T\+I\+F\+S\+\_\+\+A\+C\+C\+E\+P\+T\+ES\mbox{[}\mbox{]} ou encore accepte l\textquotesingle{}indicatif s\textquotesingle{}il commence par un 9. \end{DoxyCompactList}\item 
+bool \hyperlink{validationFormat_8cpp_a25f8d52b23785c48a5256d8b66ab466d}{util\+::valider\+Num\+R\+A\+MQ} (const std\+::string \&p\+\_\+numero, const std\+::string \&p\+\_\+nom, const std\+::string \&p\+\_\+prenom, int p\+\_\+jour\+Naissance, int p\+\_\+mois\+Naissance, int p\+\_\+annee\+Naissance, char p\+\_\+sexe)
+\begin{DoxyCompactList}\small\item\em Vérifie qu\textquotesingle{}un numéro de R\+A\+MQ fourni sous forme de string respecte le format standard et qu\textquotesingle{}il concorde avec les autres informations fournies. Le format standard est les suivant N\+N\+NP A\+A\+MM J\+J\+XX où NN sont les trois premières lettres du nom de famille de la personne en Maj, P est la première lettre du prénom de la personne en Maj, AA sont les deux derniers chiffres de l\textquotesingle{}année de naissance de la personne MM sont les chiffres du mois de naissance de la personne JJ sont les chiffres du jour de naissance de la personne XX est un code administratif dont on ne connait pas la valeur. \end{DoxyCompactList}\item 
+bool \hyperlink{validationFormat_8cpp_a79c9909ab5b1e969dc6b2f77d966eb6c}{util\+::verification\+Longueur\+R\+A\+MQ} (const std\+::string \&p\+\_\+numero)
+\begin{DoxyCompactList}\small\item\em Vérifie que le numéro de la R\+A\+MQ fournie est de la bonne longueur. \end{DoxyCompactList}\item 
+bool \hyperlink{validationFormat_8cpp_a6046ececaf0ad6874e7a9b76a797ff44}{util\+::verification\+Position\+Espaces\+R\+A\+MQ} (const std\+::string \&p\+\_\+numero)
+\begin{DoxyCompactList}\small\item\em Vérifie que le numéro de la R\+A\+MQ fournie possède deux espaces qui sont aux bons endroits. \end{DoxyCompactList}\item 
+bool \hyperlink{validationFormat_8cpp_a8515bea07b4b8021d249d03d6626b7ee}{util\+::verification\+Nom\+R\+A\+MQ} (const std\+::string \&p\+\_\+numero, const std\+::string \&p\+\_\+nom)
+\begin{DoxyCompactList}\small\item\em Vérifie que le numéro de la R\+A\+MQ fournie concorde avec le nom de la personne. \end{DoxyCompactList}\item 
+bool \hyperlink{validationFormat_8cpp_af22d126590f7a04264c228a2dc1f1dca}{util\+::verification\+Prenom\+R\+A\+MQ} (const std\+::string \&p\+\_\+numero, const std\+::string \&p\+\_\+prenom)
+\begin{DoxyCompactList}\small\item\em Vérifie que le numéro de la R\+A\+MQ fournie concorde avec le prénom de la personne. \end{DoxyCompactList}\item 
+bool \hyperlink{validationFormat_8cpp_ac1410e9900e443039e04492a9dcb51ae}{util\+::verification\+Annee\+R\+A\+MQ} (const std\+::string \&p\+\_\+numero, const int p\+\_\+annee\+Naissance)
+\begin{DoxyCompactList}\small\item\em Vérifie que le numéro de la R\+A\+MQ fournie concorde avec l\textquotesingle{}année de naissance de la personne. \end{DoxyCompactList}\item 
+bool \hyperlink{validationFormat_8cpp_a6b46e2eb29fab39a4b3df7c6c703b3b3}{util\+::verification\+Mois\+R\+A\+MQ} (const std\+::string \&p\+\_\+numero, const int p\+\_\+mois\+Naissance, char \&p\+\_\+sexe)
+\begin{DoxyCompactList}\small\item\em Vérifie que le numéro de la R\+A\+MQ fournie concorde avec le mois de naissance de la personne. \end{DoxyCompactList}\item 
+bool \hyperlink{validationFormat_8cpp_a9188427a80c9811cb9cac0432584a097}{util\+::verification\+Jour\+R\+A\+MQ} (const std\+::string \&p\+\_\+numero, int p\+\_\+jour\+Naissance)
+\begin{DoxyCompactList}\small\item\em Vérifie que le numéro de la R\+A\+MQ fournie concorde avec le jour de naissance de la personne. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{validationFormat_8cpp_a9725447dd2572abb047af57c0101793f}{util\+::transfo\+Majuscule} (const std\+::string \&p\+\_\+chaine\+A\+Changer)
+\begin{DoxyCompactList}\small\item\em Fonction qui prend un string en entrée et donne en sortie un string majuscule du string d\textquotesingle{}entrée. \end{DoxyCompactList}\item 
+bool \hyperlink{validationFormat_8cpp_ab3d93e73408df98688844f00a8cdce58}{util\+::valider\+Format\+Nom} (const std\+::string \&p\+\_\+nom)
+\begin{DoxyCompactList}\small\item\em Vérifie que le nom donné ne contient que des lettres (maj ou min) et n\textquotesingle{}est pas vide. \end{DoxyCompactList}\item 
+bool \hyperlink{validationFormat_8cpp_a0f4b6c8097b37ec3712dc34d2363a083}{util\+::valider\+Sexe} (const char \&p\+\_\+sexe)
+\begin{DoxyCompactList}\small\item\em Vérifie que le sexe donné en entrée est soit \textquotesingle{}M\textquotesingle{},\textquotesingle{}m\textquotesingle{},\textquotesingle{}F\textquotesingle{} ou \textquotesingle{}f\textquotesingle{}. \end{DoxyCompactList}\item 
+bool \hyperlink{validationFormat_8cpp_afc8b13ca75c2d31a81d2cff1e9ae7d7c}{util\+::valider\+Position} (const std\+::string \&p\+\_\+position)
+\begin{DoxyCompactList}\small\item\em Vérifie que la position en entrée est soit \char`\"{}centre\char`\"{},\char`\"{}ailier\char`\"{},\char`\"{}défenseur\char`\"{} ou \char`\"{}gardien\char`\"{}. \end{DoxyCompactList}\item 
+bool \hyperlink{validationFormat_8cpp_abed031230a6601feb893f74fe783c5ff}{util\+::valider\+Age\+Entraineur} (const Date \&p\+\_\+date\+Naissance\+Entraineur)
+\begin{DoxyCompactList}\small\item\em Vérifie que l\textquotesingle{}âge en entrée est supérieur à 18 ans. \end{DoxyCompactList}\item 
+bool \hyperlink{validationFormat_8cpp_afef869875a75ed592e94ef4f02d08419}{util\+::valider\+Age\+Joueur} (const Date \&p\+\_\+date\+Naissance\+Joueur)
+\begin{DoxyCompactList}\small\item\em Vérifie que l\textquotesingle{}âge en entrée est entre 15 et 17 ans. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Ce fichier comporte les fonctions permettant de valider le numéro de téléphone standard canadien au niveau national ainsi que le numéro de la R\+A\+MQ. 
+
+\begin{DoxyAuthor}{Author}
+Jordan Longval 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+10/02/20 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{validationFormat_8cpp_file_a9725447dd2572abb047af57c0101793f}\label{validationFormat_8cpp_file_a9725447dd2572abb047af57c0101793f}} 
+\index{validation\+Format.\+cpp@{validation\+Format.\+cpp}!transfo\+Majuscule@{transfo\+Majuscule}}
+\index{transfo\+Majuscule@{transfo\+Majuscule}!validation\+Format.\+cpp@{validation\+Format.\+cpp}}
+\subsubsection{\texorpdfstring{transfo\+Majuscule()}{transfoMajuscule()}}
+{\footnotesize\ttfamily std\+::string util\+::transfo\+Majuscule (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+\_\+chaine\+A\+Changer }\end{DoxyParamCaption})}
+
+
+
+Fonction qui prend un string en entrée et donne en sortie un string majuscule du string d\textquotesingle{}entrée. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+chaine\+A\+Changer} & un string que l\textquotesingle{}on veut mettre complètement en majuscule \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+p\+\_\+chaine\+A\+Changer ne doit contenir que des lettres de a à z ou A à Z. 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+un string contenant la version majuscule de la chaine à changer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{validationFormat_8cpp_file_abed031230a6601feb893f74fe783c5ff}\label{validationFormat_8cpp_file_abed031230a6601feb893f74fe783c5ff}} 
+\index{validation\+Format.\+cpp@{validation\+Format.\+cpp}!valider\+Age\+Entraineur@{valider\+Age\+Entraineur}}
+\index{valider\+Age\+Entraineur@{valider\+Age\+Entraineur}!validation\+Format.\+cpp@{validation\+Format.\+cpp}}
+\subsubsection{\texorpdfstring{valider\+Age\+Entraineur()}{validerAgeEntraineur()}}
+{\footnotesize\ttfamily bool util\+::valider\+Age\+Entraineur (\begin{DoxyParamCaption}\item[{const \hyperlink{classutil_1_1Date}{Date} \&}]{p\+\_\+date\+Naissance\+Entraineur }\end{DoxyParamCaption})}
+
+
+
+Vérifie que l\textquotesingle{}âge en entrée est supérieur à 18 ans. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+date\+Naissance\+Entraineur} & la date de naissance à valider \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un bool qui est vrai lorsque les conditions sont satisfaites. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{validationFormat_8cpp_file_afef869875a75ed592e94ef4f02d08419}\label{validationFormat_8cpp_file_afef869875a75ed592e94ef4f02d08419}} 
+\index{validation\+Format.\+cpp@{validation\+Format.\+cpp}!valider\+Age\+Joueur@{valider\+Age\+Joueur}}
+\index{valider\+Age\+Joueur@{valider\+Age\+Joueur}!validation\+Format.\+cpp@{validation\+Format.\+cpp}}
+\subsubsection{\texorpdfstring{valider\+Age\+Joueur()}{validerAgeJoueur()}}
+{\footnotesize\ttfamily bool util\+::valider\+Age\+Joueur (\begin{DoxyParamCaption}\item[{const \hyperlink{classutil_1_1Date}{Date} \&}]{p\+\_\+date\+Naissance\+Joueur }\end{DoxyParamCaption})}
+
+
+
+Vérifie que l\textquotesingle{}âge en entrée est entre 15 et 17 ans. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+date\+Naissance\+Joueur} & la date de naissance à valider \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un bool qui est vrai lorsque les conditions sont satisfaites. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{validationFormat_8cpp_file_ab3d93e73408df98688844f00a8cdce58}\label{validationFormat_8cpp_file_ab3d93e73408df98688844f00a8cdce58}} 
+\index{validation\+Format.\+cpp@{validation\+Format.\+cpp}!valider\+Format\+Nom@{valider\+Format\+Nom}}
+\index{valider\+Format\+Nom@{valider\+Format\+Nom}!validation\+Format.\+cpp@{validation\+Format.\+cpp}}
+\subsubsection{\texorpdfstring{valider\+Format\+Nom()}{validerFormatNom()}}
+{\footnotesize\ttfamily bool util\+::valider\+Format\+Nom (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+\_\+nom }\end{DoxyParamCaption})}
+
+
+
+Vérifie que le nom donné ne contient que des lettres (maj ou min) et n\textquotesingle{}est pas vide. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+nom} & le nom à valider \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un bool qui est vrai lorsque le nom de contient que des lettres (Maj ou min) et n\textquotesingle{}est pas vide et faux si ce n\textquotesingle{}est pas le cas. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{validationFormat_8cpp_file_a25f8d52b23785c48a5256d8b66ab466d}\label{validationFormat_8cpp_file_a25f8d52b23785c48a5256d8b66ab466d}} 
+\index{validation\+Format.\+cpp@{validation\+Format.\+cpp}!valider\+Num\+R\+A\+MQ@{valider\+Num\+R\+A\+MQ}}
+\index{valider\+Num\+R\+A\+MQ@{valider\+Num\+R\+A\+MQ}!validation\+Format.\+cpp@{validation\+Format.\+cpp}}
+\subsubsection{\texorpdfstring{valider\+Num\+R\+A\+M\+Q()}{validerNumRAMQ()}}
+{\footnotesize\ttfamily bool util\+::valider\+Num\+R\+A\+MQ (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+\_\+numero,  }\item[{const std\+::string \&}]{p\+\_\+nom,  }\item[{const std\+::string \&}]{p\+\_\+prenom,  }\item[{int}]{p\+\_\+jour\+Naissance,  }\item[{int}]{p\+\_\+mois\+Naissance,  }\item[{int}]{p\+\_\+annee\+Naissance,  }\item[{char}]{p\+\_\+sexe }\end{DoxyParamCaption})}
+
+
+
+Vérifie qu\textquotesingle{}un numéro de R\+A\+MQ fourni sous forme de string respecte le format standard et qu\textquotesingle{}il concorde avec les autres informations fournies. Le format standard est les suivant N\+N\+NP A\+A\+MM J\+J\+XX où NN sont les trois premières lettres du nom de famille de la personne en Maj, P est la première lettre du prénom de la personne en Maj, AA sont les deux derniers chiffres de l\textquotesingle{}année de naissance de la personne MM sont les chiffres du mois de naissance de la personne JJ sont les chiffres du jour de naissance de la personne XX est un code administratif dont on ne connait pas la valeur. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+numero} & Un string contenant le numéro de R\+A\+MQ à valider \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+nom} & Un string contenant le nom de la personne \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+prenom} & Un string contenant le prenom de la personne \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+jour\+Naissance} & un entier représentant le jour de naissance de la personne \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+mois\+Naissance} & un entier représentant le mois de naissance de la personne \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+annee\+Naissance} & un entier représentant les deux derniers chiffres de l\textquotesingle{}année de naissance de la personne \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+sexe} & un charactère représentant le sexe de la personne \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+les valeurs p\+\_\+nom à p\+\_\+sex doivent être valides. les valeurs valides de p\+\_\+sex sont \textquotesingle{}m\textquotesingle{},\textquotesingle{}M\textquotesingle{},pour homme et \textquotesingle{}f\textquotesingle{},\textquotesingle{}F\textquotesingle{}, pour femme. 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+un bool qui est vrai lorsque le numéro de R\+A\+MQ est valide. et faux si ce n\textquotesingle{}est pas le cas. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{validationFormat_8cpp_file_afc8b13ca75c2d31a81d2cff1e9ae7d7c}\label{validationFormat_8cpp_file_afc8b13ca75c2d31a81d2cff1e9ae7d7c}} 
+\index{validation\+Format.\+cpp@{validation\+Format.\+cpp}!valider\+Position@{valider\+Position}}
+\index{valider\+Position@{valider\+Position}!validation\+Format.\+cpp@{validation\+Format.\+cpp}}
+\subsubsection{\texorpdfstring{valider\+Position()}{validerPosition()}}
+{\footnotesize\ttfamily bool util\+::valider\+Position (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+\_\+position }\end{DoxyParamCaption})}
+
+
+
+Vérifie que la position en entrée est soit \char`\"{}centre\char`\"{},\char`\"{}ailier\char`\"{},\char`\"{}défenseur\char`\"{} ou \char`\"{}gardien\char`\"{}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+position} & la position à valider \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un bool qui est vrai lorsque les conditions sont satisfaites. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{validationFormat_8cpp_file_a0f4b6c8097b37ec3712dc34d2363a083}\label{validationFormat_8cpp_file_a0f4b6c8097b37ec3712dc34d2363a083}} 
+\index{validation\+Format.\+cpp@{validation\+Format.\+cpp}!valider\+Sexe@{valider\+Sexe}}
+\index{valider\+Sexe@{valider\+Sexe}!validation\+Format.\+cpp@{validation\+Format.\+cpp}}
+\subsubsection{\texorpdfstring{valider\+Sexe()}{validerSexe()}}
+{\footnotesize\ttfamily bool util\+::valider\+Sexe (\begin{DoxyParamCaption}\item[{const char \&}]{p\+\_\+sexe }\end{DoxyParamCaption})}
+
+
+
+Vérifie que le sexe donné en entrée est soit \textquotesingle{}M\textquotesingle{},\textquotesingle{}m\textquotesingle{},\textquotesingle{}F\textquotesingle{} ou \textquotesingle{}f\textquotesingle{}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+sexe} & le sexe à valider \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un bool qui est vrai lorsque les conditions sont satisfaites. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{validationFormat_8cpp_file_ad19b58e0318b66129069390b2da7496e}\label{validationFormat_8cpp_file_ad19b58e0318b66129069390b2da7496e}} 
+\index{validation\+Format.\+cpp@{validation\+Format.\+cpp}!valider\+Telephone@{valider\+Telephone}}
+\index{valider\+Telephone@{valider\+Telephone}!validation\+Format.\+cpp@{validation\+Format.\+cpp}}
+\subsubsection{\texorpdfstring{valider\+Telephone()}{validerTelephone()}}
+{\footnotesize\ttfamily bool util\+::valider\+Telephone (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+\_\+telephone }\end{DoxyParamCaption})}
+
+
+
+Valide le format d\textquotesingle{}un numéro de téléphone pour qu\textquotesingle{}il respecte le format national canadien standard. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+telephone} & Un string contenant le numéro de téléphone à valider. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+p\+\_\+telephone doit être une variable std\+::string. 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+un bool qui est vrai lorsque le numéro respecte le format et faux si ce n\textquotesingle{}est pas le cas. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{validationFormat_8cpp_file_ac1410e9900e443039e04492a9dcb51ae}\label{validationFormat_8cpp_file_ac1410e9900e443039e04492a9dcb51ae}} 
+\index{validation\+Format.\+cpp@{validation\+Format.\+cpp}!verification\+Annee\+R\+A\+MQ@{verification\+Annee\+R\+A\+MQ}}
+\index{verification\+Annee\+R\+A\+MQ@{verification\+Annee\+R\+A\+MQ}!validation\+Format.\+cpp@{validation\+Format.\+cpp}}
+\subsubsection{\texorpdfstring{verification\+Annee\+R\+A\+M\+Q()}{verificationAnneeRAMQ()}}
+{\footnotesize\ttfamily bool util\+::verification\+Annee\+R\+A\+MQ (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+\_\+numero,  }\item[{const int}]{p\+\_\+annee\+Naissance }\end{DoxyParamCaption})}
+
+
+
+Vérifie que le numéro de la R\+A\+MQ fournie concorde avec l\textquotesingle{}année de naissance de la personne. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+numero} & Le string du numéro de la R\+A\+MQ fourni \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+annee\+Naissance} & un int contenant l\textquotesingle{}annee de naissance de la personne \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+p\+\_\+numero doit être un string 
+
+p\+\_\+annee\+Naissance doit être un int et l\textquotesingle{}année de naissance doit être valide. 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+un bool qui est vrai lorsque le numéro de la R\+A\+MQ concorde avec l\textquotesingle{}année de naissance de la personne et faux si ce n\textquotesingle{}est pas le cas. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{validationFormat_8cpp_file_a00b57c98b926a63daa8215e1436b63dc}\label{validationFormat_8cpp_file_a00b57c98b926a63daa8215e1436b63dc}} 
+\index{validation\+Format.\+cpp@{validation\+Format.\+cpp}!verification\+Chiffres@{verification\+Chiffres}}
+\index{verification\+Chiffres@{verification\+Chiffres}!validation\+Format.\+cpp@{validation\+Format.\+cpp}}
+\subsubsection{\texorpdfstring{verification\+Chiffres()}{verificationChiffres()}}
+{\footnotesize\ttfamily bool util\+::verification\+Chiffres (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+\_\+telephone }\end{DoxyParamCaption})}
+
+
+
+Vérifie que le numéro ne contient que des chiffres (à l\textquotesingle{}exception de l\textquotesingle{}espace et du trait) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+telephone} & Un string contenant le numéro de téléphone à valider. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+p\+\_\+telephone doit être une variable std\+::string qui a passé toutes les validations des fonctions précédentes. 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+un bool qui est vrai lorsque le numéro ne contient que des chiffres et faux si ce n\textquotesingle{}est pas le cas. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{validationFormat_8cpp_file_a91d98db549a5328db80783a9cb5a3811}\label{validationFormat_8cpp_file_a91d98db549a5328db80783a9cb5a3811}} 
+\index{validation\+Format.\+cpp@{validation\+Format.\+cpp}!verification\+Espace\+Trait@{verification\+Espace\+Trait}}
+\index{verification\+Espace\+Trait@{verification\+Espace\+Trait}!validation\+Format.\+cpp@{validation\+Format.\+cpp}}
+\subsubsection{\texorpdfstring{verification\+Espace\+Trait()}{verificationEspaceTrait()}}
+{\footnotesize\ttfamily bool util\+::verification\+Espace\+Trait (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+\_\+telephone }\end{DoxyParamCaption})}
+
+
+
+Vérifie que le numéro contient un espace et un trait et qu\textquotesingle{}ils sont aux bons endroits. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+telephone} & Un string contenant le numéro de téléphone à valider. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+p\+\_\+telephone doit être une variable std\+::string qui a passé toutes les validations des fonctions précédentes. 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+un bool qui est vrai lorsque l\textquotesingle{}espace et le trait sont présents et aux bons endroits et faux si ce n\textquotesingle{}est pas le cas. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{validationFormat_8cpp_file_a06d6b26422f8b93767e39482e237c75c}\label{validationFormat_8cpp_file_a06d6b26422f8b93767e39482e237c75c}} 
+\index{validation\+Format.\+cpp@{validation\+Format.\+cpp}!verification\+Indicatif@{verification\+Indicatif}}
+\index{verification\+Indicatif@{verification\+Indicatif}!validation\+Format.\+cpp@{validation\+Format.\+cpp}}
+\subsubsection{\texorpdfstring{verification\+Indicatif()}{verificationIndicatif()}}
+{\footnotesize\ttfamily bool util\+::verification\+Indicatif (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+\_\+telephone }\end{DoxyParamCaption})}
+
+
+
+Vérifie que l\textquotesingle{}indicatif du numéro est un indicatif valide. Pour ce faire le programme vérifie dans un tableau d\textquotesingle{}indicatifs acceptés I\+N\+D\+I\+C\+A\+T\+I\+F\+S\+\_\+\+A\+C\+C\+E\+P\+T\+ES\mbox{[}\mbox{]} ou encore accepte l\textquotesingle{}indicatif s\textquotesingle{}il commence par un 9. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+telephone} & Un string contenant le numéro de téléphone à valider. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+p\+\_\+telephone doit être une variable std\+::string qui a passé toutes les validations des fonctions précédentes. 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+un bool qui est vrai lorsque le numéro a un indicatif valide. et faux si ce n\textquotesingle{}est pas le cas. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{validationFormat_8cpp_file_a9188427a80c9811cb9cac0432584a097}\label{validationFormat_8cpp_file_a9188427a80c9811cb9cac0432584a097}} 
+\index{validation\+Format.\+cpp@{validation\+Format.\+cpp}!verification\+Jour\+R\+A\+MQ@{verification\+Jour\+R\+A\+MQ}}
+\index{verification\+Jour\+R\+A\+MQ@{verification\+Jour\+R\+A\+MQ}!validation\+Format.\+cpp@{validation\+Format.\+cpp}}
+\subsubsection{\texorpdfstring{verification\+Jour\+R\+A\+M\+Q()}{verificationJourRAMQ()}}
+{\footnotesize\ttfamily bool util\+::verification\+Jour\+R\+A\+MQ (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+\_\+numero,  }\item[{int}]{p\+\_\+jour\+Naissance }\end{DoxyParamCaption})}
+
+
+
+Vérifie que le numéro de la R\+A\+MQ fournie concorde avec le jour de naissance de la personne. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+numero} & Le string du numéro de la R\+A\+MQ fourni \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+jour\+Naissance} & un int contenant le jour de naissance de la personne \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+p\+\_\+numero doit être un string 
+
+p\+\_\+jour\+Naissance doit être un int et le jour de naissance doit être valide. 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+un bool qui est vrai lorsque le numéro de la R\+A\+MQ concorde avec le jour de naissance de la personne et faux si ce n\textquotesingle{}est pas le cas. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{validationFormat_8cpp_file_a79c9909ab5b1e969dc6b2f77d966eb6c}\label{validationFormat_8cpp_file_a79c9909ab5b1e969dc6b2f77d966eb6c}} 
+\index{validation\+Format.\+cpp@{validation\+Format.\+cpp}!verification\+Longueur\+R\+A\+MQ@{verification\+Longueur\+R\+A\+MQ}}
+\index{verification\+Longueur\+R\+A\+MQ@{verification\+Longueur\+R\+A\+MQ}!validation\+Format.\+cpp@{validation\+Format.\+cpp}}
+\subsubsection{\texorpdfstring{verification\+Longueur\+R\+A\+M\+Q()}{verificationLongueurRAMQ()}}
+{\footnotesize\ttfamily bool util\+::verification\+Longueur\+R\+A\+MQ (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+\_\+numero }\end{DoxyParamCaption})}
+
+
+
+Vérifie que le numéro de la R\+A\+MQ fournie est de la bonne longueur. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+numero} & Le string du numéro de la R\+A\+MQ fourni. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+p\+\_\+numero doit être un string 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+un bool qui est vrai lorsque le numéro est de la bonne longueur et faux si ce n\textquotesingle{}est pas le cas. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{validationFormat_8cpp_file_a5743386c1cc811ee37f66a9c58162ff5}\label{validationFormat_8cpp_file_a5743386c1cc811ee37f66a9c58162ff5}} 
+\index{validation\+Format.\+cpp@{validation\+Format.\+cpp}!verification\+Longueur\+Tel@{verification\+Longueur\+Tel}}
+\index{verification\+Longueur\+Tel@{verification\+Longueur\+Tel}!validation\+Format.\+cpp@{validation\+Format.\+cpp}}
+\subsubsection{\texorpdfstring{verification\+Longueur\+Tel()}{verificationLongueurTel()}}
+{\footnotesize\ttfamily bool util\+::verification\+Longueur\+Tel (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+\_\+telephone }\end{DoxyParamCaption})}
+
+
+
+Vérifie que le string du numéro de téléphone est de la bonne longueur. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+telephone} & Un string contenant le numéro de téléphone à valider. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+p\+\_\+telephone doit être une variable std\+::string. 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+un bool qui est vrai lorsque le numéro est de la bonne longueur et faux si ce n\textquotesingle{}est pas le cas. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{validationFormat_8cpp_file_a6b46e2eb29fab39a4b3df7c6c703b3b3}\label{validationFormat_8cpp_file_a6b46e2eb29fab39a4b3df7c6c703b3b3}} 
+\index{validation\+Format.\+cpp@{validation\+Format.\+cpp}!verification\+Mois\+R\+A\+MQ@{verification\+Mois\+R\+A\+MQ}}
+\index{verification\+Mois\+R\+A\+MQ@{verification\+Mois\+R\+A\+MQ}!validation\+Format.\+cpp@{validation\+Format.\+cpp}}
+\subsubsection{\texorpdfstring{verification\+Mois\+R\+A\+M\+Q()}{verificationMoisRAMQ()}}
+{\footnotesize\ttfamily bool util\+::verification\+Mois\+R\+A\+MQ (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+\_\+numero,  }\item[{const int}]{p\+\_\+mois\+Naissance,  }\item[{char \&}]{p\+\_\+sexe }\end{DoxyParamCaption})}
+
+
+
+Vérifie que le numéro de la R\+A\+MQ fournie concorde avec le mois de naissance de la personne. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+numero} & Le string du numéro de la R\+A\+MQ fourni \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+mois\+Naissance} & un int contenant le mois de naissance de la personne \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+sexe} & un char représentant le sexe de la personne. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+p\+\_\+numero doit être un string 
+
+p\+\_\+mois\+Naissance doit être un int et le mois de naissance doit être valide. 
+
+p\+\_\+sexe doit être un char valant \textquotesingle{}m\textquotesingle{},\textquotesingle{}M\textquotesingle{},\textquotesingle{}f\textquotesingle{} ou \textquotesingle{}F\textquotesingle{} et le sexe de la personne doit être valide. 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+un bool qui est vrai lorsque le numéro de la R\+A\+MQ concorde avec le mois de naissance de la personne et faux si ce n\textquotesingle{}est pas le cas. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{validationFormat_8cpp_file_a8515bea07b4b8021d249d03d6626b7ee}\label{validationFormat_8cpp_file_a8515bea07b4b8021d249d03d6626b7ee}} 
+\index{validation\+Format.\+cpp@{validation\+Format.\+cpp}!verification\+Nom\+R\+A\+MQ@{verification\+Nom\+R\+A\+MQ}}
+\index{verification\+Nom\+R\+A\+MQ@{verification\+Nom\+R\+A\+MQ}!validation\+Format.\+cpp@{validation\+Format.\+cpp}}
+\subsubsection{\texorpdfstring{verification\+Nom\+R\+A\+M\+Q()}{verificationNomRAMQ()}}
+{\footnotesize\ttfamily bool util\+::verification\+Nom\+R\+A\+MQ (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+\_\+numero,  }\item[{const std\+::string \&}]{p\+\_\+nom }\end{DoxyParamCaption})}
+
+
+
+Vérifie que le numéro de la R\+A\+MQ fournie concorde avec le nom de la personne. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+numero} & Le string du numéro de la R\+A\+MQ fourni \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+nom} & un string contenant le nom de la personne \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+p\+\_\+numero doit être un string 
+
+p\+\_\+nom doit être un string et le nom doit être valide. 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+un bool qui est vrai lorsque le numéro de la R\+A\+MQ concorde avec le nom de la personne et faux si ce n\textquotesingle{}est pas le cas. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{validationFormat_8cpp_file_a6046ececaf0ad6874e7a9b76a797ff44}\label{validationFormat_8cpp_file_a6046ececaf0ad6874e7a9b76a797ff44}} 
+\index{validation\+Format.\+cpp@{validation\+Format.\+cpp}!verification\+Position\+Espaces\+R\+A\+MQ@{verification\+Position\+Espaces\+R\+A\+MQ}}
+\index{verification\+Position\+Espaces\+R\+A\+MQ@{verification\+Position\+Espaces\+R\+A\+MQ}!validation\+Format.\+cpp@{validation\+Format.\+cpp}}
+\subsubsection{\texorpdfstring{verification\+Position\+Espaces\+R\+A\+M\+Q()}{verificationPositionEspacesRAMQ()}}
+{\footnotesize\ttfamily bool util\+::verification\+Position\+Espaces\+R\+A\+MQ (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+\_\+numero }\end{DoxyParamCaption})}
+
+
+
+Vérifie que le numéro de la R\+A\+MQ fournie possède deux espaces qui sont aux bons endroits. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+numero} & Le string du numéro de la R\+A\+MQ fourni \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+p\+\_\+numero doit être un string 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+un bool qui est vrai lorsque les espaces sont présents et aux bons endroits et faux si ce n\textquotesingle{}est pas le cas. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{validationFormat_8cpp_file_af22d126590f7a04264c228a2dc1f1dca}\label{validationFormat_8cpp_file_af22d126590f7a04264c228a2dc1f1dca}} 
+\index{validation\+Format.\+cpp@{validation\+Format.\+cpp}!verification\+Prenom\+R\+A\+MQ@{verification\+Prenom\+R\+A\+MQ}}
+\index{verification\+Prenom\+R\+A\+MQ@{verification\+Prenom\+R\+A\+MQ}!validation\+Format.\+cpp@{validation\+Format.\+cpp}}
+\subsubsection{\texorpdfstring{verification\+Prenom\+R\+A\+M\+Q()}{verificationPrenomRAMQ()}}
+{\footnotesize\ttfamily bool util\+::verification\+Prenom\+R\+A\+MQ (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+\_\+numero,  }\item[{const std\+::string \&}]{p\+\_\+prenom }\end{DoxyParamCaption})}
+
+
+
+Vérifie que le numéro de la R\+A\+MQ fournie concorde avec le prénom de la personne. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+numero} & Le string du numéro de la R\+A\+MQ fourni \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+prenom} & un string contenant le nom de la personne \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+p\+\_\+numero doit être un string 
+
+p\+\_\+prenom doit être un string et le prenom doit être valide. 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+un bool qui est vrai lorsque le numéro de la R\+A\+MQ concorde avec le prenom de la personne et faux si ce n\textquotesingle{}est pas le cas. 
+\end{DoxyReturn}

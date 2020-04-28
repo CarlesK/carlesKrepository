@@ -1,0 +1,12 @@
+#include "ajoutentraineurinterface.h"
+
+AjoutEntraineurInterface::AjoutEntraineurInterface(QWidget *parent)
+    : QWidget(parent)
+{
+	ui.setupUi(this);
+}
+
+AjoutEntraineurInterface::~AjoutEntraineurInterface()
+{
+
+}

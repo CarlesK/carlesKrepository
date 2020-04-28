@@ -1,0 +1,257 @@
+09:33:00 **** Incremental Build of configuration Debug for project source ****
+make all 
+make: rien à faire pour « all ».
+09:34:35 **** Incremental Build of configuration Debug for project AnnuaireTesteur ****
+make all 
+make: rien à faire pour « all ».
+09:34:35 **** Incremental Build of configuration Debug for project EntraineurTesteur ****
+make all 
+make: rien à faire pour « all ».
+09:34:35 **** Incremental Build of configuration Debug for project JoueurTesteur ****
+make all 
+make: rien à faire pour « all ».
+09:34:35 **** Incremental Build of configuration Debug for project PersonneTesteur ****
+make all 
+make: rien à faire pour « all ».
+09:34:36 **** Incremental Build of configuration Debug for project ProgrammeUtilisateur ****
+make all 
+make: rien à faire pour « all ».
+09:34:36 **** Incremental Build of configuration Debug for project source ****
+make all 
+Building file: ../Entraineur.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Entraineur.d" -MT"Entraineur.o" -o "Entraineur.o" "../Entraineur.cpp"
+Finished building: ../Entraineur.cpp
+ 
+Building file: ../Personne.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Personne.d" -MT"Personne.o" -o "Personne.o" "../Personne.cpp"
+Finished building: ../Personne.cpp
+ 
+Building target: libsource.a
+Invoking: GCC Archiver
+ar -r  "libsource.a"  ./Annuaire.o ./ContratException.o ./Date.o ./Entraineur.o ./Joueur.o ./Personne.o ./validationFormat.o   
+ar: création de libsource.a
+Finished building target: libsource.a
+ 
+09:34:37 **** Incremental Build of project AnnuaireGUI ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/TP4/AnnuaireGUI »
+/usr/lib/i386-linux-gnu/qt4/bin/uic ajoutentraineurinterface.ui -o ui_ajoutentraineurinterface.h
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../source -Idebug -I. -o debug/ajoutentraineurinterface.o ajoutentraineurinterface.cpp
+/usr/lib/i386-linux-gnu/qt4/bin/moc -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../source -Idebug -I. ajoutentraineurinterface.h -o debug/moc_ajoutentraineurinterface.cpp
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../source -Idebug -I. -o debug/moc_ajoutentraineurinterface.o debug/moc_ajoutentraineurinterface.cpp
+g++  -o AnnuaireGUI debug/ajoutentraineurinterface.o debug/ajoutannuaireinterface.o debug/ajoutjoueurinterface.o debug/main.o debug/annuairegui.o debug/moc_ajoutentraineurinterface.o debug/moc_ajoutannuaireinterface.o debug/moc_ajoutjoueurinterface.o debug/moc_annuairegui.o    -L/usr/lib/i386-linux-gnu ../source/Debug/libsource.a -lQtGui -lQtCore -lpthread 
+{ test -n "" && DESTDIR="" || DESTDIR=.; } && test $(gdb --version | sed -e 's,[^0-9][^0-9]*\([0-9]\)\.\([0-9]\).*,\1\2,;q') -gt 72 && gdb --nx --batch --quiet -ex 'set confirm off' -ex "save gdb-index $DESTDIR" -ex quit 'AnnuaireGUI' && test -f AnnuaireGUI.gdb-index && objcopy --add-section '.gdb_index=AnnuaireGUI.gdb-index' --set-section-flags '.gdb_index=readonly' 'AnnuaireGUI' 'AnnuaireGUI' && rm -f AnnuaireGUI.gdb-index || true
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/TP4/AnnuaireGUI »
+09:34:41 **** Incremental Build of configuration Debug for project source ****
+make all 
+make: rien à faire pour « all ».
+09:34:41 **** Incremental Build of project AnnuaireGUI ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/TP4/AnnuaireGUI »
+make[1]: rien à faire pour « first ».
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/TP4/AnnuaireGUI »
+09:55:37 **** Incremental Build of configuration Debug for project AnnuaireTesteur ****
+make all 
+Building target: AnnuaireTesteur
+Invoking: GCC C++ Linker
+g++ -L"/home/etudiant/Bureau/TP4/source/Debug" -o "AnnuaireTesteur"  ./AnnuaireTesteur.o   -lsource -lgtest_main -lgtest -lpthread
+Finished building target: AnnuaireTesteur
+ 
+09:55:38 **** Incremental Build of configuration Debug for project EntraineurTesteur ****
+make all 
+Building target: EntraineurTesteur
+Invoking: GCC C++ Linker
+g++ -L"/home/etudiant/Bureau/TP4/source/Debug" -o "EntraineurTesteur"  ./EntraineurTesteur.o   -lgtest_main -lsource -lgtest -lpthread
+Finished building target: EntraineurTesteur
+ 
+09:55:38 **** Incremental Build of configuration Debug for project JoueurTesteur ****
+make all 
+Building target: JoueurTesteur
+Invoking: GCC C++ Linker
+g++ -L"/home/etudiant/Bureau/TP4/source/Debug" -o "JoueurTesteur"  ./JoueurTesteur.o   -lsource -lgtest_main -lgtest -lpthread
+Finished building target: JoueurTesteur
+ 
+09:55:38 **** Incremental Build of configuration Debug for project PersonneTesteur ****
+make all 
+Building target: PersonneTesteur
+Invoking: GCC C++ Linker
+g++ -L"/home/etudiant/Bureau/TP4/source/Debug" -o "PersonneTesteur"  ./PersonneTesteur.o   -lsource -lgtest_main -lgtest -lpthread
+Finished building target: PersonneTesteur
+ 
+09:55:39 **** Incremental Build of configuration Debug for project ProgrammeUtilisateur ****
+make all 
+Building target: ProgrammeUtilisateur
+Invoking: GCC C++ Linker
+g++ -L"/home/etudiant/Bureau/TP4/source/Debug" -o "ProgrammeUtilisateur"  ./ProgrammeUtilisateur.o   -lsource
+Finished building target: ProgrammeUtilisateur
+ 
+09:55:39 **** Incremental Build of configuration Debug for project source ****
+make all 
+make: rien à faire pour « all ».
+09:55:39 **** Incremental Build of project AnnuaireGUI ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/TP4/AnnuaireGUI »
+/usr/lib/i386-linux-gnu/qt4/bin/uic ajoutjoueurinterface.ui -o ui_ajoutjoueurinterface.h
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../source -Idebug -I. -o debug/ajoutentraineurinterface.o ajoutentraineurinterface.cpp
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../source -Idebug -I. -o debug/ajoutjoueurinterface.o ajoutjoueurinterface.cpp
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../source -Idebug -I. -o debug/annuairegui.o annuairegui.cpp
+/usr/lib/i386-linux-gnu/qt4/bin/moc -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../source -Idebug -I. ajoutjoueurinterface.h -o debug/moc_ajoutjoueurinterface.cpp
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../source -Idebug -I. -o debug/moc_ajoutjoueurinterface.o debug/moc_ajoutjoueurinterface.cpp
+g++  -o AnnuaireGUI debug/ajoutentraineurinterface.o debug/ajoutannuaireinterface.o debug/ajoutjoueurinterface.o debug/main.o debug/annuairegui.o debug/moc_ajoutentraineurinterface.o debug/moc_ajoutannuaireinterface.o debug/moc_ajoutjoueurinterface.o debug/moc_annuairegui.o    -L/usr/lib/i386-linux-gnu ../source/Debug/libsource.a -lQtGui -lQtCore -lpthread 
+{ test -n "" && DESTDIR="" || DESTDIR=.; } && test $(gdb --version | sed -e 's,[^0-9][^0-9]*\([0-9]\)\.\([0-9]\).*,\1\2,;q') -gt 72 && gdb --nx --batch --quiet -ex 'set confirm off' -ex "save gdb-index $DESTDIR" -ex quit 'AnnuaireGUI' && test -f AnnuaireGUI.gdb-index && objcopy --add-section '.gdb_index=AnnuaireGUI.gdb-index' --set-section-flags '.gdb_index=readonly' 'AnnuaireGUI' 'AnnuaireGUI' && rm -f AnnuaireGUI.gdb-index || true
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/TP4/AnnuaireGUI »
+09:56:36 **** Incremental Build of configuration Debug for project AnnuaireTesteur ****
+make all 
+make: rien à faire pour « all ».
+09:56:37 **** Incremental Build of configuration Debug for project EntraineurTesteur ****
+make all 
+make: rien à faire pour « all ».
+09:56:37 **** Incremental Build of configuration Debug for project JoueurTesteur ****
+make all 
+make: rien à faire pour « all ».
+09:56:37 **** Incremental Build of configuration Debug for project PersonneTesteur ****
+make all 
+make: rien à faire pour « all ».
+09:56:37 **** Incremental Build of configuration Debug for project ProgrammeUtilisateur ****
+make all 
+make: rien à faire pour « all ».
+09:56:38 **** Incremental Build of configuration Debug for project source ****
+make all 
+make: rien à faire pour « all ».
+09:56:38 **** Incremental Build of project AnnuaireGUI ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/TP4/AnnuaireGUI »
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../source -Idebug -I. -o debug/ajoutentraineurinterface.o ajoutentraineurinterface.cpp
+g++  -o AnnuaireGUI debug/ajoutentraineurinterface.o debug/ajoutannuaireinterface.o debug/ajoutjoueurinterface.o debug/main.o debug/annuairegui.o debug/moc_ajoutentraineurinterface.o debug/moc_ajoutannuaireinterface.o debug/moc_ajoutjoueurinterface.o debug/moc_annuairegui.o    -L/usr/lib/i386-linux-gnu ../source/Debug/libsource.a -lQtGui -lQtCore -lpthread 
+{ test -n "" && DESTDIR="" || DESTDIR=.; } && test $(gdb --version | sed -e 's,[^0-9][^0-9]*\([0-9]\)\.\([0-9]\).*,\1\2,;q') -gt 72 && gdb --nx --batch --quiet -ex 'set confirm off' -ex "save gdb-index $DESTDIR" -ex quit 'AnnuaireGUI' && test -f AnnuaireGUI.gdb-index && objcopy --add-section '.gdb_index=AnnuaireGUI.gdb-index' --set-section-flags '.gdb_index=readonly' 'AnnuaireGUI' 'AnnuaireGUI' && rm -f AnnuaireGUI.gdb-index || true
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/TP4/AnnuaireGUI »
+10:04:22 **** Incremental Build of configuration Debug for project AnnuaireTesteur ****
+make all 
+make: rien à faire pour « all ».
+10:04:22 **** Incremental Build of configuration Debug for project EntraineurTesteur ****
+make all 
+make: rien à faire pour « all ».
+10:04:22 **** Incremental Build of configuration Debug for project JoueurTesteur ****
+make all 
+make: rien à faire pour « all ».
+10:04:23 **** Incremental Build of configuration Debug for project PersonneTesteur ****
+make all 
+make: rien à faire pour « all ».
+10:04:23 **** Incremental Build of configuration Debug for project ProgrammeUtilisateur ****
+make all 
+make: rien à faire pour « all ».
+10:04:23 **** Incremental Build of configuration Debug for project source ****
+make all 
+make: rien à faire pour « all ».
+10:04:23 **** Incremental Build of project AnnuaireGUI ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/TP4/AnnuaireGUI »
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../source -Idebug -I. -o debug/ajoutentraineurinterface.o ajoutentraineurinterface.cpp
+ajoutentraineurinterface.cpp: In member function ‘void AjoutEntraineurInterface::valideEnregistrement()’:
+ajoutentraineurinterface.cpp:84:66: error: too few arguments to function ‘bool util::validerNumRAMQ(const string&, const string&, const string&, int, int, int, char)’
+  if(util::validerNumRAMQ(ui.numRAMQLineEdit->text().toStdString())==0)
+                                                                  ^
+In file included from ajoutentraineurinterface.cpp:3:0:
+../source/validationFormat.h:61:6: note: declared here
+ bool validerNumRAMQ(const std::string& p_numero, const std::string& p_nom, const
+      ^~~~~~~~~~~~~~
+Makefile.Debug:200: recipe for target 'debug/ajoutentraineurinterface.o' failed
+make[1]: *** [debug/ajoutentraineurinterface.o] Error 1
+make: *** [debug] Error 2
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/TP4/AnnuaireGUI »
+Makefile:50: recipe for target 'debug' failed
+10:09:34 **** Incremental Build of configuration Debug for project AnnuaireTesteur ****
+make all 
+make: rien à faire pour « all ».
+10:09:35 **** Incremental Build of configuration Debug for project EntraineurTesteur ****
+make all 
+make: rien à faire pour « all ».
+10:09:35 **** Incremental Build of configuration Debug for project JoueurTesteur ****
+make all 
+make: rien à faire pour « all ».
+10:09:35 **** Incremental Build of configuration Debug for project PersonneTesteur ****
+make all 
+make: rien à faire pour « all ».
+10:09:36 **** Incremental Build of configuration Debug for project ProgrammeUtilisateur ****
+make all 
+make: rien à faire pour « all ».
+10:09:36 **** Incremental Build of configuration Debug for project source ****
+make all 
+make: rien à faire pour « all ».
+10:09:36 **** Incremental Build of project AnnuaireGUI ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/TP4/AnnuaireGUI »
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../source -Idebug -I. -o debug/ajoutentraineurinterface.o ajoutentraineurinterface.cpp
+g++  -o AnnuaireGUI debug/ajoutentraineurinterface.o debug/ajoutannuaireinterface.o debug/ajoutjoueurinterface.o debug/main.o debug/annuairegui.o debug/moc_ajoutentraineurinterface.o debug/moc_ajoutannuaireinterface.o debug/moc_ajoutjoueurinterface.o debug/moc_annuairegui.o    -L/usr/lib/i386-linux-gnu ../source/Debug/libsource.a -lQtGui -lQtCore -lpthread 
+{ test -n "" && DESTDIR="" || DESTDIR=.; } && test $(gdb --version | sed -e 's,[^0-9][^0-9]*\([0-9]\)\.\([0-9]\).*,\1\2,;q') -gt 72 && gdb --nx --batch --quiet -ex 'set confirm off' -ex "save gdb-index $DESTDIR" -ex quit 'AnnuaireGUI' && test -f AnnuaireGUI.gdb-index && objcopy --add-section '.gdb_index=AnnuaireGUI.gdb-index' --set-section-flags '.gdb_index=readonly' 'AnnuaireGUI' 'AnnuaireGUI' && rm -f AnnuaireGUI.gdb-index || true
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/TP4/AnnuaireGUI »
+10:09:55 **** Incremental Build of configuration Debug for project source ****
+make all 
+make: rien à faire pour « all ».
+10:09:55 **** Incremental Build of project AnnuaireGUI ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/TP4/AnnuaireGUI »
+make[1]: rien à faire pour « first ».
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/TP4/AnnuaireGUI »
+10:12:55 **** Incremental Build of configuration Debug for project source ****
+make all 
+make: rien à faire pour « all ».
+10:12:56 **** Incremental Build of project AnnuaireGUI ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/TP4/AnnuaireGUI »
+make[1]: rien à faire pour « first ».
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/TP4/AnnuaireGUI »
+10:27:21 **** Incremental Build of configuration Debug for project AnnuaireTesteur ****
+make all 
+make: rien à faire pour « all ».
+10:27:21 **** Incremental Build of configuration Debug for project EntraineurTesteur ****
+make all 
+make: rien à faire pour « all ».
+10:27:22 **** Incremental Build of configuration Debug for project JoueurTesteur ****
+make all 
+make: rien à faire pour « all ».
+10:27:22 **** Incremental Build of configuration Debug for project PersonneTesteur ****
+make all 
+make: rien à faire pour « all ».
+10:27:22 **** Incremental Build of configuration Debug for project ProgrammeUtilisateur ****
+make all 
+make: rien à faire pour « all ».
+10:27:22 **** Incremental Build of configuration Debug for project source ****
+make all 
+make: rien à faire pour « all ».
+10:27:23 **** Incremental Build of project AnnuaireGUI ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/TP4/AnnuaireGUI »
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../source -Idebug -I. -o debug/ajoutjoueurinterface.o ajoutjoueurinterface.cpp
+g++  -o AnnuaireGUI debug/ajoutentraineurinterface.o debug/ajoutannuaireinterface.o debug/ajoutjoueurinterface.o debug/main.o debug/annuairegui.o debug/moc_ajoutentraineurinterface.o debug/moc_ajoutannuaireinterface.o debug/moc_ajoutjoueurinterface.o debug/moc_annuairegui.o    -L/usr/lib/i386-linux-gnu ../source/Debug/libsource.a -lQtGui -lQtCore -lpthread 
+{ test -n "" && DESTDIR="" || DESTDIR=.; } && test $(gdb --version | sed -e 's,[^0-9][^0-9]*\([0-9]\)\.\([0-9]\).*,\1\2,;q') -gt 72 && gdb --nx --batch --quiet -ex 'set confirm off' -ex "save gdb-index $DESTDIR" -ex quit 'AnnuaireGUI' && test -f AnnuaireGUI.gdb-index && objcopy --add-section '.gdb_index=AnnuaireGUI.gdb-index' --set-section-flags '.gdb_index=readonly' 'AnnuaireGUI' 'AnnuaireGUI' && rm -f AnnuaireGUI.gdb-index || true
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/TP4/AnnuaireGUI »
+10:27:26 **** Incremental Build of configuration Debug for project source ****
+make all 
+make: rien à faire pour « all ».
+10:27:26 **** Incremental Build of project AnnuaireGUI ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/TP4/AnnuaireGUI »
+make[1]: rien à faire pour « first ».
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/TP4/AnnuaireGUI »
+10:27:41 **** Incremental Build of configuration Debug for project source ****
+make all 
+make: rien à faire pour « all ».
+10:27:42 **** Incremental Build of project AnnuaireGUI ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/TP4/AnnuaireGUI »
+make[1]: rien à faire pour « first ».
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/TP4/AnnuaireGUI »

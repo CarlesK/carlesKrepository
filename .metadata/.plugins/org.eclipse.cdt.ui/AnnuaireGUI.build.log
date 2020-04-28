@@ -1,0 +1,9 @@
+13:59:38 **** Incremental Build of project AnnuaireGUI ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/TP4/AnnuaireGUI »
+make[1]: rien à faire pour « first ».
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/TP4/AnnuaireGUI »
+
+13:59:39 Build Finished (took 242ms)
+

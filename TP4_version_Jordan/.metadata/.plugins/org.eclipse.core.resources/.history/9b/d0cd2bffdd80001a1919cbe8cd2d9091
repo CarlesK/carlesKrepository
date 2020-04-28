@@ -1,0 +1,17 @@
+#include "ajoutjoueurinterface.h"
+
+AjoutJoueurInterface::AjoutJoueurInterface(QWidget *parent)
+    : QDialog(parent)
+{
+	ui.setupUi(this);
+	QObject::connect(this)
+}
+
+AjoutJoueurInterface::~AjoutJoueurInterface()
+{
+
+}
+
+QString reqNom() const;
+QString reqPrenom() const;
+util::Date reqDateNaissance() const;

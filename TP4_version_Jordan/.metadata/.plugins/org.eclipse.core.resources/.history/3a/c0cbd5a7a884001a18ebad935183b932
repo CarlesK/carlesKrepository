@@ -1,0 +1,13 @@
+#include "annuairegui.h"
+
+#include <QtGui>
+#include <QApplication>
+
+int main(int argc, char *argv[])
+{
+    QApplication a(argc, argv);
+    AnnuaireGUI w;
+    QString::fromUtf8("éèçà");
+    w.show();
+    return a.exec();
+}

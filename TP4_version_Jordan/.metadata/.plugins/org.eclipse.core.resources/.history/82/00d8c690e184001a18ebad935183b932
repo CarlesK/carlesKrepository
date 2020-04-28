@@ -1,0 +1,12 @@
+#include "ajoutannuaireinterface.h"
+
+AjoutAnnuaireInterface::AjoutAnnuaireInterface(QWidget *parent)
+    : QDialog(parent)
+{
+	ui.setupUi(this);
+}
+
+AjoutAnnuaireInterface::~AjoutAnnuaireInterface()
+{
+
+}

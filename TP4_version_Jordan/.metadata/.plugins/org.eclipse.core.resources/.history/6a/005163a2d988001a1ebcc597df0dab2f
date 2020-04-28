@@ -1,0 +1,14 @@
+#include "ajoutentraineurinterface.h"
+
+AjoutEntraineurInterface::AjoutEntraineurInterface(QWidget *parent)
+    : QWidget(parent)
+{
+	ui.setupUi(this);
+	ui.sexeComboBox->addItem("Masculin");
+	ui.sexeComboBox->addItem("Féminin");
+}
+
+AjoutEntraineurInterface::~AjoutEntraineurInterface()
+{
+
+}

@@ -1,0 +1,15 @@
+13:50:54 **** Build of project GUI ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/TP4_share/carlesKrepository/GUI »
+/usr/lib/i386-linux-gnu/qt4/bin/uic gui.ui -o ui_gui.h
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -Idebug -I. -o debug/main.o main.cpp
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -Idebug -I. -o debug/gui.o gui.cpp
+/usr/lib/i386-linux-gnu/qt4/bin/moc -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -Idebug -I. gui.h -o debug/moc_gui.cpp
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -Idebug -I. -o debug/moc_gui.o debug/moc_gui.cpp
+g++  -o GUI debug/main.o debug/gui.o debug/moc_gui.o    -L/usr/lib/i386-linux-gnu -lQtGui -lQtCore -lpthread 
+{ test -n "" && DESTDIR="" || DESTDIR=.; } && test $(gdb --version | sed -e 's,[^0-9][^0-9]*\([0-9]\)\.\([0-9]\).*,\1\2,;q') -gt 72 && gdb --nx --batch --quiet -ex 'set confirm off' -ex "save gdb-index $DESTDIR" -ex quit 'GUI' && test -f GUI.gdb-index && objcopy --add-section '.gdb_index=GUI.gdb-index' --set-section-flags '.gdb_index=readonly' 'GUI' 'GUI' && rm -f GUI.gdb-index || true
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/TP4_share/carlesKrepository/GUI »
+
+13:50:57 Build Finished (took 2s.913ms)
+

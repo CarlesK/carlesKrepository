@@ -1,0 +1,17 @@
+TEMPLATE = app
+TARGET = AnnuaireGUI
+QT += core \
+    gui
+HEADERS += ajoutannuaireinterface.h \
+    ajoutjoueurinterface.h \
+    annuairegui.h
+SOURCES += ajoutannuaireinterface.cpp \
+    ajoutjoueurinterface.cpp \
+    main.cpp \
+    annuairegui.cpp
+FORMS += ajoutannuaireinterface.ui \
+    ajoutjoueurinterface.ui \
+    annuairegui.ui
+RESOURCES += 
+LIBS += "../source/Debug/libsource.a"
+INCLUDEPATH += "../source/."

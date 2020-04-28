@@ -1,0 +1,165 @@
+\hypertarget{classhockey_1_1Entraineur}{}\section{hockey\+:\+:Entraineur Class Reference}
+\label{classhockey_1_1Entraineur}\index{hockey\+::\+Entraineur@{hockey\+::\+Entraineur}}
+
+
+Cette classe sert au maintien et à la manipulation des entraineurs. Elle hérite de la classe \hyperlink{classhockey_1_1Personne}{Personne}.  
+
+
+
+
+{\ttfamily \#include $<$Entraineur.\+h$>$}
+
+
+
+Inheritance diagram for hockey\+:\+:Entraineur\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{classhockey_1_1Entraineur__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for hockey\+:\+:Entraineur\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classhockey_1_1Entraineur__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classhockey_1_1Entraineur_a707fdafbb52daf320baf757f7d7c460f}{Entraineur} (std\+::string p\+\_\+nom, std\+::string p\+\_\+prenom, const \hyperlink{classutil_1_1Date}{util\+::\+Date} \&p\+\_\+date\+Naissance, std\+::string p\+\_\+telephone, std\+::string p\+\_\+num\+R\+A\+MQ, char p\+\_\+sexe)
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe entraîneur avec des paramètres en entrée. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhockey_1_1Entraineur_a4dff2cf754acea2fbc3a510146618de9}\label{classhockey_1_1Entraineur_a4dff2cf754acea2fbc3a510146618de9}} 
+\hyperlink{classhockey_1_1Entraineur_a4dff2cf754acea2fbc3a510146618de9}{Entraineur} ()
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe entraîneur sans paramètre d\textquotesingle{}entrée. Ce constructeur permet de retourner une erreur de précondition si le constructeur vide par défaut est utilisé. \end{DoxyCompactList}\item 
+const std\+::string \& \hyperlink{classhockey_1_1Entraineur_a7f9bb4ef1197e785be0cd7e506f26bbd}{req\+Num\+R\+A\+MQ} () const
+\begin{DoxyCompactList}\small\item\em Méthode permettant de retourner le numéro de R\+A\+MQ de l\textquotesingle{}entraîneur. \end{DoxyCompactList}\item 
+const char \& \hyperlink{classhockey_1_1Entraineur_a8bd3cd9717f896085b74782e5b1170fc}{req\+Sexe} () const
+\begin{DoxyCompactList}\small\item\em Méthode permettant de retourner le sexe de l\textquotesingle{}entraîneur. \end{DoxyCompactList}\item 
+virtual std\+::string \hyperlink{classhockey_1_1Entraineur_a376149c10b8541c45d703682d41d80f3}{req\+Personne\+Formate} () const
+\begin{DoxyCompactList}\small\item\em Méthode permettant de retourner les informations de l\textquotesingle{}entraîneur. \end{DoxyCompactList}\item 
+virtual \hyperlink{classhockey_1_1Personne}{Personne} $\ast$ \hyperlink{classhockey_1_1Entraineur_a734eb3d04a6209542fbfc989c398613e}{clone} () const
+\begin{DoxyCompactList}\small\item\em Méthode permettant de créer une nouvelle instance de l\textquotesingle{}entraîneur. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhockey_1_1Entraineur_a5146ae4be0b4ce34d8056cb0a012d5be}\label{classhockey_1_1Entraineur_a5146ae4be0b4ce34d8056cb0a012d5be}} 
+virtual \hyperlink{classhockey_1_1Entraineur_a5146ae4be0b4ce34d8056cb0a012d5be}{$\sim$\+Entraineur} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de la classe \hyperlink{classhockey_1_1Entraineur}{Entraineur}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Cette classe sert au maintien et à la manipulation des entraineurs. Elle hérite de la classe \hyperlink{classhockey_1_1Personne}{Personne}. 
+
+Les valeurs qui entrent dans la classe doivent être validée à priori. 
+
+Attributs\+: string p\+\_\+nom, string p\+\_\+prenom, Date p\+\_\+date\+Naissance, string p\+\_\+telephone, p\+\_\+num\+R\+A\+MQ, p\+\_\+sexe 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhockey_1_1Entraineur_a707fdafbb52daf320baf757f7d7c460f}\label{classhockey_1_1Entraineur_a707fdafbb52daf320baf757f7d7c460f}} 
+\index{hockey\+::\+Entraineur@{hockey\+::\+Entraineur}!Entraineur@{Entraineur}}
+\index{Entraineur@{Entraineur}!hockey\+::\+Entraineur@{hockey\+::\+Entraineur}}
+\subsubsection{\texorpdfstring{Entraineur()}{Entraineur()}}
+{\footnotesize\ttfamily hockey\+::\+Entraineur\+::\+Entraineur (\begin{DoxyParamCaption}\item[{std\+::string}]{p\+\_\+nom,  }\item[{std\+::string}]{p\+\_\+prenom,  }\item[{const \hyperlink{classutil_1_1Date}{util\+::\+Date} \&}]{p\+\_\+date\+Naissance,  }\item[{std\+::string}]{p\+\_\+telephone,  }\item[{std\+::string}]{p\+\_\+num\+R\+A\+MQ,  }\item[{char}]{p\+\_\+sexe }\end{DoxyParamCaption})}
+
+
+
+Constructeur de la classe entraîneur avec des paramètres en entrée. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+nom} & un string représentant le nom de l\textquotesingle{}entraîneur \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+prenom} & un string représentant le prénom de l\textquotesingle{}entraîneur \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+date\+Naissance} & un objet Date représentant la date de naissance de l\textquotesingle{}entraîneur \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+telephone} & un string représentant le numéro de téléphone de l\textquotesingle{}entraîneur \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+num\+R\+A\+MQ} & un string représentant le numéro de R\+A\+MQ de l\textquotesingle{}entraîneur \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+sexe} & un char représentant le sexe de l\textquotesingle{}entraîneur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+Tous les paramètres en entrée doivent être valide pour une personne standard. 
+
+Le numéro de R\+A\+MQ de l\textquotesingle{}entraîneur doit être valide avec les infos de l\textquotesingle{}entraîneur et avoir un format valide 
+
+Le sexe de l\textquotesingle{}entraîneur doit être \textquotesingle{}m\textquotesingle{} ou \textquotesingle{}M\textquotesingle{} pour homme et \textquotesingle{}f\textquotesingle{} ou \textquotesingle{}F\textquotesingle{} pour femme. 
+\end{DoxyPrecond}
+\begin{DoxyInvariant}{Invariant}
+Les invariants de l\textquotesingle{}entraîneur sont les mêmes que ceux d\textquotesingle{}une personne standard. 
+
+L\textquotesingle{}entraîneur doit également avoir un sexe valide et un numéro de R\+A\+MQ valide. 
+\end{DoxyInvariant}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhockey_1_1Entraineur_a734eb3d04a6209542fbfc989c398613e}\label{classhockey_1_1Entraineur_a734eb3d04a6209542fbfc989c398613e}} 
+\index{hockey\+::\+Entraineur@{hockey\+::\+Entraineur}!clone@{clone}}
+\index{clone@{clone}!hockey\+::\+Entraineur@{hockey\+::\+Entraineur}}
+\subsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \hyperlink{classhockey_1_1Personne}{Personne} $\ast$ hockey\+::\+Entraineur\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Méthode permettant de créer une nouvelle instance de l\textquotesingle{}entraîneur. 
+
+\begin{DoxyReturn}{Returns}
+un pointeur vers la nouvelle instance de l\textquotesingle{}entraîneur. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classhockey_1_1Personne}{hockey\+::\+Personne}.
+
+\mbox{\Hypertarget{classhockey_1_1Entraineur_a7f9bb4ef1197e785be0cd7e506f26bbd}\label{classhockey_1_1Entraineur_a7f9bb4ef1197e785be0cd7e506f26bbd}} 
+\index{hockey\+::\+Entraineur@{hockey\+::\+Entraineur}!req\+Num\+R\+A\+MQ@{req\+Num\+R\+A\+MQ}}
+\index{req\+Num\+R\+A\+MQ@{req\+Num\+R\+A\+MQ}!hockey\+::\+Entraineur@{hockey\+::\+Entraineur}}
+\subsubsection{\texorpdfstring{req\+Num\+R\+A\+M\+Q()}{reqNumRAMQ()}}
+{\footnotesize\ttfamily const string \& hockey\+::\+Entraineur\+::req\+Num\+R\+A\+MQ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Méthode permettant de retourner le numéro de R\+A\+MQ de l\textquotesingle{}entraîneur. 
+
+\begin{DoxyReturn}{Returns}
+un string représentant le numéro de R\+A\+MQ de l\textquotesingle{}entraîneur. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classhockey_1_1Entraineur_a376149c10b8541c45d703682d41d80f3}\label{classhockey_1_1Entraineur_a376149c10b8541c45d703682d41d80f3}} 
+\index{hockey\+::\+Entraineur@{hockey\+::\+Entraineur}!req\+Personne\+Formate@{req\+Personne\+Formate}}
+\index{req\+Personne\+Formate@{req\+Personne\+Formate}!hockey\+::\+Entraineur@{hockey\+::\+Entraineur}}
+\subsubsection{\texorpdfstring{req\+Personne\+Formate()}{reqPersonneFormate()}}
+{\footnotesize\ttfamily string hockey\+::\+Entraineur\+::req\+Personne\+Formate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Méthode permettant de retourner les informations de l\textquotesingle{}entraîneur. 
+
+\begin{DoxyReturn}{Returns}
+un string représentant les informations de l\textquotesingle{}entraîneur. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classhockey_1_1Personne_ae67b3d253c1fa8a090dd8040ca1e8ccc}{hockey\+::\+Personne}.
+
+\mbox{\Hypertarget{classhockey_1_1Entraineur_a8bd3cd9717f896085b74782e5b1170fc}\label{classhockey_1_1Entraineur_a8bd3cd9717f896085b74782e5b1170fc}} 
+\index{hockey\+::\+Entraineur@{hockey\+::\+Entraineur}!req\+Sexe@{req\+Sexe}}
+\index{req\+Sexe@{req\+Sexe}!hockey\+::\+Entraineur@{hockey\+::\+Entraineur}}
+\subsubsection{\texorpdfstring{req\+Sexe()}{reqSexe()}}
+{\footnotesize\ttfamily const char \& hockey\+::\+Entraineur\+::req\+Sexe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Méthode permettant de retourner le sexe de l\textquotesingle{}entraîneur. 
+
+\begin{DoxyReturn}{Returns}
+un char représentant le sexe de l\textquotesingle{}entraîneur. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Entraineur_8h}{Entraineur.\+h}\item 
+Entraineur.\+cpp\end{DoxyCompactItemize}
